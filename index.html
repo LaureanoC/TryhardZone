@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/banner.css">
     <link rel="stylesheet" href="assets/css/categorias.css">
-    
+    <link rel="stylesheet" href="assets/css/footer.css">
     <script src="https://kit.fontawesome.com/b95dc486b7.js" crossorigin="anonymous"></script>
     <title>Tryhard Zone</title>
 </head>
@@ -28,10 +28,10 @@
             <div class="banner__contenido">
                 <h1 class="banner__titulo">Abril Promocional</h1>
                 <p class="banner__descripcion">Productos seleccionados con descuentos</p>
-                <a href="#peluches"><div class="banner__boton">Ver peluches</div></a>
+                <a href="#videojuegos"><div class="banner__boton">Ver videojuegos</div></a>
             </div>
         </section>
-        
+        <a name="videojuegos"></a>
         <section class="categorias">
 
             <div class="categorias__contenido">
@@ -80,7 +80,7 @@
                     <p class="card__precio">5500</p>
                     <a class="card__link" href="#">Ver producto</a>
                 </div>
-
+<!--
                 <div class="categorias__card">
                     <img class="card__img"src="assets/img/videojuegos/godofwar.png">
                     <p class="card__nombre">God of War</p>
@@ -94,7 +94,7 @@
                     <p class="card__precio">Coming Soon</p>
                     <a class="card__link" href="#">Ver producto</a>
                 </div>
-
+-->
             </div>
         </section>
 
@@ -202,7 +202,7 @@
                     <p class="card__precio">1600</p>
                     <a class="card__link" href="#">Ver producto</a>
                 </div>
-
+<!--
                 <div class="categorias__card">
                     <img class="card__img"src="assets/img/pokemon/leafeon.png">
                     <p class="card__nombre">Peluche de Leafeon</p>
@@ -223,18 +223,35 @@
                     <p class="card__precio">1600</p>
                     <a class="card__link" href="#">Ver producto</a>
                 </div>
-
-                
-
-                
-
+-->
                 
             </div>
         </section>
 
-
-
     </main>
-    <footer></footer>
+
+    <footer class="footer">
+        <div class="footer__contenido">
+            <p class="header__logo"></p>
+            <div class="footer__link">
+                <a href="#">Quienes somos</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Programa de fidelidad</a>
+                <a href="#">Nuestras Tiendas</a>
+                <a href="#">Quiero ser franquiciado</a>
+                <a href="#">Anuncie aquí</a>
+            </div>
+            <div class="footer__formulario">
+                <p class="formulario__titulo">Hable con nosotros</p>
+                <div class="formulario__conjunto">
+                    <label class="formulario__label"for="name">Nombre</label>
+                    <input name="name" type="text" class="formulario__nombre" id="nombre" placeholder="Laureano Neyén Chaves">
+                </div>
+                <textarea name="mensaje" id="mensaje" class="formulario__mensaje" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+        </div>
+    </footer>
+
+    <div class="rodapie">Diseñado por Laureano Neyén Chaves 2022 &copy;</div>
 </body>
 </html>
