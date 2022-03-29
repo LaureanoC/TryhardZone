@@ -1,0 +1,71 @@
+.sticky{
+
+        position: fixed;
+        top: 0;
+        background-color: #F5F5F5;
+        width: 100% 
+}
+
+.sticky__header{
+
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap:1.25rem;
+    padding-bottom: 1rem;
+
+}
+
+
+.header__logo{
+
+    font-size: 1.5rem;
+
+}
+
+.header__logo::before {
+    
+    content: "TryHard";
+    color:#2A7AE4;
+    font-weight: 700;
+    
+}
+
+.header__logo::after {
+    
+    content: "Zone";
+    font-weight: 700;
+    
+}
+
+.header__buscador{
+
+    
+    width: 24rem;
+    height: 2.5rem;
+    outline:none;
+    font-family: Raleway, sans-serif;
+    border: solid 1px #2A7AE4;
+    padding-left: 1rem;
+    font-size: 1rem;
+    
+}
+
+.fa-solid{
+
+    cursor:pointer;
+    color:#464646;
+    margin-right:auto;
+}
+
+.header__login{
+
+    border: solid #2A7AE4 1px;
+    text-align: center;
+    color:#2A7AE4;
+    padding: 1rem 3.5rem;
+    cursor:pointer;
+}
+
