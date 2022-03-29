@@ -1,0 +1,48 @@
+.banner{
+    width: 100%;
+    height:22rem;
+    margin: 6.125rem auto;
+    background-color: #9c9b9b;
+    background-image: url("../img/banner3.png"); 
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner__contenido{
+    
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap:1.25rem;
+    padding:1.5rem;
+
+}
+
+.banner__titulo{
+
+    padding-top: 4.5rem;;
+    color:#FFFFFF;
+    font-size: 3.25rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    
+        
+}
+
+.banner__descripcion{
+    
+    color:#FFFFFF;
+    font-weight: 700;
+    font-size:1.375rem;
+}
+
+.banner__boton{
+
+    background-color: #2A7AE4;
+    cursor:pointer;
+    color:#FFFFFF;
+    padding: 1rem 3rem;
+}
