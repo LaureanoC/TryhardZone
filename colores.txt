@@ -1,0 +1,13 @@
+Fuentes: Raleway 400 700
+
+Color busqueda:		#A2A2A2 %50 Preto/50% rgba(162, 162, 162, 1)
+Color titulo imagen:	#FFFFFF
+Color boton:  		#2A7AE4
+Color verProducto: 	#2A7AE4
+Color de fondo: 	#E5E5E5
+Color Precio y texto:   #464646
+Color fondo form: 	#EAF2FD
+
+
+
+
