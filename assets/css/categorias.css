@@ -1,0 +1,66 @@
+.categorias__contenido{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    gap:1rem;;
+    
+}
+
+
+.categorias__header{
+    flex-basis: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.categorias__titulo{
+    margin-top:4rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.categorias__link{
+
+    color:#2A7AE4;
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+.fa-arrow-right {
+    color:#2A7AE4
+}
+
+.categorias__card{
+
+    display: flex;
+    flex-flow: column;
+    gap:0.5rem;
+    
+
+}
+
+.card__precio{
+
+    font-size: 1rem;
+    font-weight: 700;
+    
+}
+
+.card__precio::before{
+    
+    content: "$";
+}
+
+.card__link{
+
+    color:#2A7AE4;
+    font-weight: 700;
+}
+
+
+

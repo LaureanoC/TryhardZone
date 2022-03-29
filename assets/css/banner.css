@@ -1,12 +1,13 @@
 .banner{
     width: 100%;
-    height:22rem;
-    margin: 6.125rem auto;
-    background-color: #9c9b9b;
+    margin: 6.125rem auto 0 auto;
+    background-color: #4495ff;
     background-image: url("../img/banner3.png"); 
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
+    
+    
 }
 
 .banner__contenido{

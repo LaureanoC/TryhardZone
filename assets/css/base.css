@@ -3,7 +3,8 @@
 :root {
 
     font-family: 'Raleway', sans-serif;
-    background-color: #E5E5E5;
+    background-color: #FFFFFF;
     color:#464646;
     line-height: 1rem;
+    scroll-behavior: smooth;
 }
