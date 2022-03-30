@@ -47,16 +47,32 @@
     width: 24rem;
     height: 2.5rem;
     outline:none;
+   
+    background-color: rgb(236, 236, 236);
+    border-radius: 1rem;
     font-family: Raleway, sans-serif;
-    border: solid 1px #2A7AE4;
     padding-left: 1rem;
     font-size: 1rem;
+    border:none;
     
+}
+
+.header__conjuntobusqueda{
+
+    display: flex;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    border: solid 1px rgb(236, 236, 236);
+    border-radius: 1rem;
+    padding-right: 1rem;
+  
+
 }
 
 .fa-solid{
 
     cursor:pointer;
+    background-color: rgb(236, 236, 236);
     color:#464646;
    
 }
