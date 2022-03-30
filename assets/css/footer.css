@@ -85,7 +85,15 @@ border-color: #2A7AE4;
     border-bottom: 1px solid rgb(192, 191, 191);
     
 }
+.formulario__boton{ 
 
+    background-color: #2A7AE4;
+    cursor:pointer;
+    color:#FFFFFF;
+    padding: 1rem 3rem;
+    margin-right: auto;
+
+}
 .rodapie{
     padding: 2.5rem 0;
     text-align: center;
