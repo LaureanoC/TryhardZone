@@ -8,3 +8,13 @@
     line-height: 1rem;
     scroll-behavior: smooth;
 }
+
+@media (max-width: 450px) {
+
+
+    html{
+
+        font-size: 0.7rem;
+
+    }
+}
