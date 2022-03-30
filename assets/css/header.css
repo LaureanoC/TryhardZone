@@ -43,11 +43,9 @@
 
 .header__buscador{
 
-    
     width: 24rem;
     height: 2.5rem;
     outline:none;
-   
     background-color: rgb(236, 236, 236);
     border-radius: 1rem;
     font-family: Raleway, sans-serif;
@@ -87,3 +85,70 @@
     cursor:pointer;
 }
 
+@media (min-width:451px) and (max-width:768px) {
+
+   
+}
+
+@media (max-width: 450px) {
+
+
+    html{
+
+        font-size: 0.7rem;
+
+    }
+
+    .sticky__header{
+
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1920px;
+        padding:1.5rem 0;
+    
+    }
+
+    .header__buscador{
+
+        display: none;
+        width: 24rem;
+        height: 2.5rem;
+        outline:none;
+        background-color: rgb(236, 236, 236);
+        border-radius: 1rem;
+        font-family: Raleway, sans-serif;
+        padding-left: 1rem;
+        font-size: 1rem;
+        border:none;
+        
+    }
+
+    .header__conjuntobusqueda{
+
+        order: 3;
+        display: flex;
+        align-items: center;
+        background-color: #FFFFFF;
+        border: solid 1px #FFFFFF;
+        border-radius: 1rem;
+        
+      
+    }
+
+    .header__login{
+
+        border: solid #2A7AE4 1px;
+        text-align: center;
+        color:#2A7AE4;
+        margin: 0;
+
+        padding: 1rem 3.5rem;
+        cursor:pointer;
+    }
+
+
+
+}
