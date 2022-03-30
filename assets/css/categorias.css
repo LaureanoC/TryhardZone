@@ -77,11 +77,16 @@
         display: flex;
         align-items: center;
         flex-flow: row wrap;
-        gap:1rem;;
+        justify-content: space-between;
+        
+        gap:2rem 0rem;
         max-width: 1920px;
         
     }
 
+    .fa-arrow-right {
+        font-size: 1rem;
+    }
 }
 
 
