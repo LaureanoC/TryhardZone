@@ -104,6 +104,7 @@
         width: 90%;
         margin: 0 auto;
         display: flex;
+        
         justify-content: space-between;
         align-items: center;
         max-width: 1920px;
@@ -133,8 +134,7 @@
         align-items: center;
         background-color: #FFFFFF;
         border: solid 1px #FFFFFF;
-        border-radius: 1rem;
-        
+        border-radius: 1rem;     
       
     }
 
@@ -144,9 +144,17 @@
         text-align: center;
         color:#2A7AE4;
         margin: 0;
-
         padding: 1rem 3.5rem;
         cursor:pointer;
+    }
+
+    .fa-solid{
+
+        cursor:pointer;
+        font-size: 2rem;
+        background-color: #FFFFFF;
+        color:#464646;
+       
     }
 
 

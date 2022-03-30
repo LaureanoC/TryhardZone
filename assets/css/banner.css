@@ -48,3 +48,37 @@
     color:#FFFFFF;
     padding: 1rem 3rem;
 }
+
+@media (min-width:451px) and (max-width:768px) {
+
+   
+}
+
+@media (max-width: 450px) {
+
+    .banner{
+        
+        margin: 6.125rem auto 0 auto;
+        background-color: #4495ff;
+        background-image: url("../img/banner3.png"); 
+        box-sizing: content-box;
+        background-size: cover;
+        background-position:700px ;
+        
+    }
+    
+    .banner__contenido{
+
+        width: 90%;
+        max-width: 1920px;
+        margin: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        
+
+    }
+
+
+
+}
