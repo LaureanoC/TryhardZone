@@ -33,16 +33,15 @@
 }
 
 .fa-arrow-right {
-    color:#2A7AE4
+    color:#2A7AE4;
+    background-color: white;
 }
 
 .categorias__card{
 
     display: flex;
     flex-flow: column;
-    gap:0.5rem;
-    
-
+    gap:0.5rem; 
 }
 
 .card__precio{
@@ -61,6 +60,10 @@
 
     color:#2A7AE4;
     font-weight: 700;
+}
+
+.card__img{
+    background-color: whitesmoke;
 }
 
 @media (min-width:451px) and (max-width:768px) {
