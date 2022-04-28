@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script src="../base_js/head.js"></script>
+<link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+    <header class="sticky"></header>
+
+    <main>
+        <section class="login">
+            <h1 class="login__titulo">Iniciar Sesión</h1>
+            <form class="login__form">
+                <input name="usuario" type="text" class="form__usuario" id="usuario" placeholder="Escriba su usuario" data-usuario>
+                <input name="password" type="password" class="form__password" id="password" placeholder="Escriba su contraseña" data-password>
+                <button class="form__login">Ingresar</button>
+            </form>
+
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+    <script src="../base_js/header.js"></script>
+    <script src="../base_js/footer.js"></script>
+    <script type = "module" src="../js/btnlogin.js"></script>
+    <script type = "module" src="../controllers/iniciarSesion.js"></script>
+</body>
+</html>

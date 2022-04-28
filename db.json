@@ -1,0 +1,23 @@
+{
+    "producto": [
+      {
+        "nombre": "Elden ring",
+        "precio": "5700",
+        "imagen":"",
+        "tipo": "v",
+        "id": 1
+      }
+     
+    ],
+
+    "usuario": [
+      {
+        "usuario": "valentina",
+        "password": "ponona",
+        "estado": "true"
+      }
+    ]
+
+}
+
+
