@@ -3,7 +3,7 @@ import { userServices } from "../service/user-service.js";
 const crearTemplate = () => {
 
 
-    
+
 }
 
 const login = (u, p) => {
@@ -14,7 +14,8 @@ const login = (u, p) => {
         data.forEach(({usuario, password}) => {
             if(usuario == u){
                 if(password == p){
-                    console.log("true");
+                    console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
+                                        // debo agregar cerrar sesión para que tenga sentido
                 } 
             }
         })
