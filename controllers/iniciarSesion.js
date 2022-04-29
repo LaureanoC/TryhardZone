@@ -71,6 +71,7 @@ const login = (u, p) => {
             if(usuario == u){
                 if(password == p){                   
                     userServices.actualizarEstado(1,true);
+                    window.location.reload();
                     console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 

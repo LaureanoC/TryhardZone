@@ -39,7 +39,7 @@ const verificarEstado = () => {
             btnAdm.textContent = "Administrar productos";
             const btnLogin = document.querySelector(".header__login");
             btnAdm.addEventListener("click", () =>  {
-                window.location.href = "/screens/crud.html";
+                window.location.href = "../screens/crud.html"
             });
             btnLogin.insertAdjacentElement("afterend", btnAdm);
           /*<a href="screens/crud.html" class="header__login">Login</a>*/   
