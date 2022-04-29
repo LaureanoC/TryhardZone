@@ -38,10 +38,11 @@ const verificarEstado = () => {
             btnAdm.className ="header__login";
             btnAdm.textContent = "Administrar productos";
             const btnLogin = document.querySelector(".header__login");
+            btnLogin.insertAdjacentElement("afterend", btnAdm);
             btnAdm.addEventListener("click", () =>  {
                 window.location.href = "../screens/crud.html"
             });
-            btnLogin.insertAdjacentElement("afterend", btnAdm);
+           
           /*<a href="screens/crud.html" class="header__login">Login</a>*/   
             cambiarLogOutALogin();
         }
