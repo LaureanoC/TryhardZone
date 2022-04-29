@@ -12,21 +12,21 @@
       "precio": "6100",
       "imagen": "../assets/img/videojuegos/fifa22.png",
       "tipo": "v",
-      "id": 1
+      "id": 2
     },
     {
       "nombre": "Camiseta de G2",
       "precio": "3000",
       "imagen": "../assets/img/esport/g2-camiseta.png",
       "tipo": "c",
-      "id": 1
+      "id": 3
     },
     {
       "nombre": "Peluche Eeve",
       "precio": "1700",
       "imagen": "../assets/img/pokemon/eeve.png",
       "tipo": "p",
-      "id": 1
+      "id": 4
     }
   ],
   "usuario": [

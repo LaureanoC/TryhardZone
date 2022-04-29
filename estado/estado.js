@@ -39,9 +39,8 @@ const verificarEstado = () => {
             btnAdm.textContent = "Administrar productos";
             const btnLogin = document.querySelector(".header__login");
             btnLogin.insertAdjacentElement("afterend", btnAdm);
-            btnAdm.addEventListener("click", () =>  {
-                window.location.href = "../screens/crud.html"
-            });
+            btnAdm.setAttribute("href","../screens/crud.html");
+            
            
           /*<a href="screens/crud.html" class="header__login">Login</a>*/   
             cambiarLogOutALogin();

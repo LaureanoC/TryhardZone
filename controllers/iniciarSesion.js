@@ -52,7 +52,6 @@ const crearSection = (tipoSeccion) => {
 
         link.addEventListener("click", () => {
 
-
             console.log("Haz hecho click en la categoria ", titulo);
         })
 
