@@ -1,5 +1,12 @@
 import { userServices } from "../service/user-service.js";
 
+const logout = () => { 
+    userServices.perfilUsuario().then((data) => {    
+        data.forEach(() => {
+                    userServices.actualizarEstado(1,false);                   
+        })
+    })
+}
 
 const cambiarLogOutALogin = () => {
     const headerLogout = document.querySelector(".header__login");
@@ -9,6 +16,7 @@ const cambiarLogOutALogin = () => {
     headerLogout.removeAttribute("href");
     headerLogout.addEventListener("click", ()=> {
         logout();
+        window.location.reload();
     })
 }
 
@@ -48,13 +56,7 @@ const verificarEstado = () => {
             }
         });
 }
-const logout = () => { 
-    userServices.perfilUsuario().then((data) => {    
-        data.forEach(() => {
-                    userServices.actualizarEstado(1,false);                   
-        })
-    })
-}
+
 
 
 verificarEstado();

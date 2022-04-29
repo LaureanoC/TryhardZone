@@ -16,6 +16,7 @@ const cambiarLogOutALogin = () => {
     headerLogout.removeAttribute("href");
     headerLogout.addEventListener("click", ()=> {
         logout();
+        window.location.reload();
     })
 }
 
