@@ -3,7 +3,8 @@ import { userServices } from "../service/user-service.js";
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false);                   
+                    userServices.actualizarEstado(1,false);
+                    window.location.reload();                   
         })
     })
 }
@@ -16,7 +17,7 @@ const cambiarLogOutALogin = () => {
     headerLogout.removeAttribute("href");
     headerLogout.addEventListener("click", ()=> {
         logout();
-        window.location.reload();
+        
     })
 }
 
