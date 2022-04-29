@@ -3,7 +3,8 @@ import { userServices } from "../service/user-service.js";
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false);                   
+                    userServices.actualizarEstado(1,false);
+                    window.location.reload();                   
     })
 })
 }
@@ -16,8 +17,8 @@ const cambiarLogOutALogin = () => {
     headerLogout.removeAttribute("href");
     headerLogout.addEventListener("click", ()=> {
         logout();
-        window.location.reload();
     })
+    
 }
 
 
@@ -38,7 +39,7 @@ const verificarEstado = () => {
             btnAdm.textContent = "Administrar productos";
             const btnLogin = document.querySelector(".header__login");
             btnAdm.addEventListener("click", () =>  {
-                window.location.href = "/screens/crud.html"
+                window.location.href = "/screens/crud.html";
             });
             btnLogin.insertAdjacentElement("afterend", btnAdm);
           /*<a href="screens/crud.html" class="header__login">Login</a>*/   
