@@ -57,3 +57,15 @@
     margin-top: 1rem;
 }
 
+.modal__tituloconjunto {
+
+    display: flex;
+    align-items: center;
+}
+
+.fa-xmark {
+
+    color:#A2A2A2;
+    margin-left: auto;
+}
+

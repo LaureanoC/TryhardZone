@@ -2,6 +2,67 @@ import { userServices } from "../service/user-service.js";
 import { productoServices } from "../service/product-service.js";
 
 var agregado = false;
+var canturl = false;
+
+
+const crearErrorImage = (error,tipoinput) => {
+        const p = document.createElement("p");
+        p.className = "modal__error";
+        p.innerHTML = `${error}`
+        p.id = `${tipoinput}`
+        const div = document.querySelector(".modal__agregarP");
+        div.insertAdjacentElement("beforebegin",p);
+}
+
+const crearErrorTextoVacio = (error) => {
+
+    const p = document.createElement("p");
+    p.className = "modal__error";
+    p.innerHTML = `El campo ${error} no puede estar vacío`
+    const div = document.querySelector(".modal__agregarP");
+    div.insertAdjacentElement("beforebegin",p);
+
+}
+
+const borrarError = (tipoinput) => {
+
+    const p = document.querySelector(`#${tipoinput}`);
+    console.log(p);
+    p.remove();
+
+}
+
+
+const validarRegistro = (fileDom,nombreDom, precioDom, descripcionDom) => {
+
+    console.log(fileDom.value);
+    console.log(nombreDom.value);
+    console.log(precioDom.value);
+    console.log(descripcionDom.value);
+
+    let urlfile = [fileDom.value , "Se debe seleccionar una imagen del tipo .png .svg ó .jpg",true];
+    let nombre = [nombreDom.value , "Nombre del producto"];
+    let precio = [precioDom.value, "Precio del producto"];
+    let descripcion = [descripcionDom.value, "Descripción del producto"];
+
+    let numeros = new RegExp ();
+    numeros = /^\d+$/; 
+    let url = new RegExp ();
+    url = /.jpg|.png|.svg/
+
+if (url.test(urlfile[0]) == false && (canturl==false)){
+        crearErrorImage(urlfile[1],"imagen");
+        canturl = true;
+} else {
+    if (url.test(urlfile[0]) && (canturl)){
+        borrarError("imagen");
+    canturl = false;
+    }    
+}
+   
+
+
+}
 
 const devolverTipo = (tipoSeccion) => {
 
@@ -23,9 +84,23 @@ const crearModal = (link,tipoSeccion) => {
     modal.className = "modal"
     modal.id = "modal";
 
+    const contenedor = document.createElement("div");
+    contenedor.className = "modal__tituloconjunto";
+
     const h2 = document.createElement("h2");
     h2.className = "modal__titulo"
     h2.innerHTML = `Agregar producto ${devolverTipo(tipoSeccion)}`
+
+    const icono = document.createElement("i");
+    icono.className = " fa-solid fa-xmark";
+    icono.addEventListener("click", (evento)=> {
+
+        evento.target.parentNode.parentNode.remove();
+        agregado = false;
+        console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
+
+    })
+    
 
     const div = document.createElement("div");
     div.className = "modal__formConjunto"
@@ -82,9 +157,17 @@ const crearModal = (link,tipoSeccion) => {
 
     agregarb.addEventListener("click", (evento)=> {
 
+        if(validarRegistro(input,input1,input2,input3)){
+
         evento.target.parentNode.remove();
         agregado = false;
-        console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
+        console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
+        } else {
+
+            console.log("PRODUCTO Rechazado");
+        }
+
+        
 
     })
 
@@ -100,7 +183,10 @@ const crearModal = (link,tipoSeccion) => {
     div.appendChild(label);
     div.appendChild(input);
 
-    modal.appendChild(h2);
+    contenedor.appendChild(h2);
+    contenedor.appendChild(icono);
+
+    modal.appendChild(contenedor);
     modal.appendChild(div);
     modal.appendChild(div1);
     modal.appendChild(div2);
