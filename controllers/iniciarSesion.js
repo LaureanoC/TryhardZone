@@ -43,21 +43,16 @@ const verificarEstado = () => {
                     login(user,pass);
                     console.log(user, pass);
                 })
-            
-            
-            
             } else {
                 cambiarLogOutALogin();
             }
         });
 }
-
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
                     userServices.actualizarEstado(1,false);                   
         })
-        
     })
 }
 
