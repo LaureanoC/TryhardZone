@@ -2,27 +2,7 @@ import { userServices } from "../service/user-service.js";
 import { productoServices } from "../service/product-service.js";
 
 var agregado = false;
-var canturl = false;
 
-
-const crearErrorImage = (error,tipoinput) => {
-        const p = document.createElement("p");
-        p.className = "modal__error";
-        p.innerHTML = `${error}`
-        p.id = `${tipoinput}`
-        const div = document.querySelector(".modal__agregarP");
-        div.insertAdjacentElement("beforebegin",p);
-}
-
-const crearErrorTextoVacio = (error) => {
-
-    const p = document.createElement("p");
-    p.className = "modal__error";
-    p.innerHTML = `El campo ${error} no puede estar vacío`
-    const div = document.querySelector(".modal__agregarP");
-    div.insertAdjacentElement("beforebegin",p);
-
-}
 
 const borrarError = (tipoinput) => {
 
@@ -35,31 +15,15 @@ const borrarError = (tipoinput) => {
 
 const validarRegistro = (fileDom,nombreDom, precioDom, descripcionDom) => {
 
-    console.log(fileDom.value);
-    console.log(nombreDom.value);
-    console.log(precioDom.value);
-    console.log(descripcionDom.value);
 
-    let urlfile = [fileDom.value , "Se debe seleccionar una imagen del tipo .png .svg ó .jpg",true];
+    let urlfile = fileDom.value;
     let nombre = [nombreDom.value , "Nombre del producto"];
     let precio = [precioDom.value, "Precio del producto"];
     let descripcion = [descripcionDom.value, "Descripción del producto"];
 
     let numeros = new RegExp ();
     numeros = /^\d+$/; 
-    let url = new RegExp ();
-    url = /.jpg|.png|.svg/
-
-if (url.test(urlfile[0]) == false && (canturl==false)){
-        crearErrorImage(urlfile[1],"imagen");
-        canturl = true;
-} else {
-    if (url.test(urlfile[0]) && (canturl)){
-        borrarError("imagen");
-    canturl = false;
-    }    
-}
-   
+    
 
 
 }
