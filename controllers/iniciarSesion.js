@@ -2,29 +2,76 @@ import { userServices } from "../service/user-service.js";
 import { productoServices } from "../service/product-service.js";
 
 var agregado = false;
-
+var estadoErrores = [false,false,false,false];
 
 const borrarError = (tipoinput) => {
-
-    const p = document.querySelector(`#${tipoinput}`);
-    console.log(p);
+    const p = document.querySelector(`#${tipoinput}`);;
     p.remove();
+    
+}
 
+const validarTexto = (texto) => {
+    if(texto != "") {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+const validarPrecio = (precio) => {
+    let numeros = new RegExp ();
+    numeros = /^\d+$/;
+
+    if(numeros.test(precio)){
+        return true
+    } else {
+        return false
+    }
+}
+
+const validarImagen = (urlimg) => {
+
+    let url = new RegExp;
+    url = /.png|.jpg|.svg/;
+
+    if(url.test(urlimg)){
+        return true
+    }else {
+        return false
+    }
+
+}
+
+const crearError = (error,tipo) => {
+    const p = document.createElement("p");
+    p.className = "modal__error";
+    p.id = `${tipo}`;
+    p.innerHTML = `${error}`
+    const div = document.querySelector(".modal__agregarP");
+    div.insertAdjacentElement("beforebegin",p);
 }
 
 
 const validarRegistro = (fileDom,nombreDom, precioDom, descripcionDom) => {
 
-
     let urlfile = fileDom.value;
     let nombre = [nombreDom.value , "Nombre del producto"];
     let precio = [precioDom.value, "Precio del producto"];
     let descripcion = [descripcionDom.value, "Descripción del producto"];
+     
+    let estadoRegistro = [];
+    estadoRegistro.push(validarImagen(urlfile));
+    estadoRegistro.push(validarTexto(nombre[0]));
+    estadoRegistro.push(validarPrecio(precio[0]));
+    estadoRegistro.push(validarTexto(descripcion[0]));
+    console.log(estadoRegistro);
 
-    let numeros = new RegExp ();
-    numeros = /^\d+$/; 
-    
-
+    if(estadoRegistro[0] && estadoRegistro[1] && estadoRegistro[2] && estadoRegistro[3]){
+        return true
+    } else {
+        return false
+    }
 
 }
 
@@ -126,12 +173,12 @@ const crearModal = (link,tipoSeccion) => {
         evento.target.parentNode.remove();
         agregado = false;
         console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
+        
+    
         } else {
-
+           
             console.log("PRODUCTO Rechazado");
         }
-
-        
 
     })
 
