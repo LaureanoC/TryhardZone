@@ -29,6 +29,7 @@
     color:#2A7AE4;
     font-weight: 700;
     font-size: 1rem;
+    cursor:pointer;
 
 }
 
@@ -36,6 +37,8 @@
     color:#2A7AE4;
     background-color: white;
 }
+
+
 
 .categorias__card{
 

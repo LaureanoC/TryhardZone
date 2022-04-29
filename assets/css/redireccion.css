@@ -1,0 +1,15 @@
+.redireccion {
+    width: 65%;
+    margin: 8rem auto 1rem auto;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    gap:1rem;;
+    max-width: 1920px;
+}
+
+.botonRedireccion {
+    background-color: #2A7AE4;
+    padding: 1.2rem;
+    color:white;
+}
