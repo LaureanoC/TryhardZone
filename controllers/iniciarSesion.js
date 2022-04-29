@@ -1,6 +1,8 @@
 import { userServices } from "../service/user-service.js";
 import { productoServices } from "../service/product-service.js";
 
+var agregado = false;
+
 const devolverTipo = (tipoSeccion) => {
 
     if (tipoSeccion == "v"){
@@ -12,6 +14,100 @@ const devolverTipo = (tipoSeccion) => {
     if (tipoSeccion == "c"){
         return "Camisetas Esports"
     }
+
+}
+
+const crearModal = (link,tipoSeccion) => {
+
+    const modal = document.createElement("div");
+    modal.className = "modal"
+    modal.id = "modal";
+
+    const h2 = document.createElement("h2");
+    h2.className = "modal__titulo"
+    h2.innerHTML = `Agregar producto ${devolverTipo(tipoSeccion)}`
+
+    const div = document.createElement("div");
+    div.className = "modal__formConjunto"
+
+    const label = document.createElement("label");
+    label.className = "modal__label"
+    label.setAttribute("for","image");
+
+    const input = document.createElement("input");
+    input.className = "modal__file"
+    input.setAttribute("type","file");
+    input.setAttribute("name","image");
+
+    const div1 = document.createElement("div");
+    div1.className = "modal__formConjunto"
+
+    const label1 = document.createElement("label");
+    label1.className = "modal__label"
+    label1.setAttribute("for","nombrep");
+
+    const input1 = document.createElement("input");
+    input1.className = "modal__input"
+    input1.setAttribute("name","nombrep");
+    input1.setAttribute("placeholder", "Nombre del producto");
+
+    const div2 = document.createElement("div");
+    div2.className = "modal__formConjunto"
+
+    const label2 = document.createElement("label");
+    label2.className = "modal__label"
+    label2.setAttribute("for","preciop");
+
+    const input2 = document.createElement("input");
+    input2.className = "modal__input"
+    input2.setAttribute("name","preciop");
+    input2.setAttribute("placeholder", "Ingrese precio del producto");
+
+    const div3 = document.createElement("div");
+    div3.className = "modal__formConjunto"
+
+    const label3 = document.createElement("label");
+    label3.className = "modal__label"
+    label3.setAttribute("for","descripcionp");
+
+    const input3 = document.createElement("input");
+    input3.className = "modal__input"
+    input3.setAttribute("name","descripcionp");
+    input3.setAttribute("placeholder", "Descripción del producto");
+
+
+    const agregarb = document.createElement("div");
+    agregarb.className = "modal__agregarP"
+    agregarb.innerHTML = "Agregar producto"
+
+    agregarb.addEventListener("click", (evento)=> {
+
+        evento.target.parentNode.remove();
+        agregado = false;
+        console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
+
+    })
+
+    div3.appendChild(label3);
+    div3.appendChild(input3);
+
+    div2.appendChild(label2);
+    div2.appendChild(input2);
+
+    div1.appendChild(label1);
+    div1.appendChild(input1);
+
+    div.appendChild(label);
+    div.appendChild(input);
+
+    modal.appendChild(h2);
+    modal.appendChild(div);
+    modal.appendChild(div1);
+    modal.appendChild(div2);
+    modal.appendChild(div3);
+    modal.appendChild(agregarb);
+
+    link.appendChild(modal);
 
 }
 
@@ -49,12 +145,16 @@ const crearSection = (tipoSeccion) => {
     const link = document.createElement("a");
         link.className = "categorias__link";
         link.innerHTML = `Agregar producto <i class="fa-solid fa-plus"></i>`;
-
         link.addEventListener("click", () => {
 
-            console.log("Haz hecho click en la categoria ", titulo);
+            if(agregado == false){
+                agregado = true;
+                crearModal(section,tipoSeccion);
+                
+                console.log("Haz hecho click en la categoria ", titulo);
+            }
+            
         })
-
 
     const main = document.querySelector(".espaciado");
     div2.appendChild(h2);
@@ -63,6 +163,8 @@ const crearSection = (tipoSeccion) => {
     section.appendChild(div);
     main.appendChild(referencia);
     main.appendChild(section);
+
+    
     
 } 
 
