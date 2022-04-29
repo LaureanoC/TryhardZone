@@ -5,24 +5,26 @@
 <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <body>
-    <header class="sticky"></header>
+    <header class="sticky">
+        <div class="sticky__header">
+            <a href="../index.html"><p class="header__logo"></p></a>
+            <div class="header__conjuntobusqueda">
+                <input class="header__buscador" type="text" placeholder="¿Que deseas buscar?">  
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <a href="crud.html" class="header__login">Login</a>
+        </div>
+    </header>
 
     <main>
-        <section class="login">
-            <h1 class="login__titulo">Iniciar Sesión</h1>
-            <form class="login__form">
-                <input name="usuario" type="text" class="form__usuario" id="usuario" placeholder="Escriba su usuario" data-usuario>
-                <input name="password" type="password" class="form__password" id="password" placeholder="Escriba su contraseña" data-password>
-                <button class="form__login">Ingresar</button>
-            </form>
-
-        </section>
+        
     </main>
 
     <footer class="footer"></footer>
-    <script src="../base_js/header.js"></script>
+
+    <script type = "module" src="../controllers/iniciarSesion.js"></script>
     <script src="../base_js/footer.js"></script>
    
-    <script type = "module" src="../controllers/iniciarSesion.js"></script>
+    
 </body>
 </html>
