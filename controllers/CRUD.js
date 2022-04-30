@@ -448,7 +448,7 @@ const crearSection = (tipoSeccion) => {
             
         })
 
-    const main = document.querySelector(".espaciado");
+    const main = document.querySelector("[data-main]");
     div2.appendChild(h2);
     div2.appendChild(link);
     div.appendChild(div2);
@@ -505,7 +505,7 @@ const mostrarProductos = () => {
 
     const flex = document.createElement("div");
     flex.className="redireccion"
-    const m = document.querySelector(".espaciado");
+    const m = document.querySelector("[data-main]");
     m.appendChild(flex);
     
     crearBotonReferencia("v");
@@ -556,7 +556,7 @@ const verificarEstado = () => {
             let estado = data[0].estado;
             console.log("el estado es ",estado);
             if (estado == "false"){
-                
+
                 /*Mostrar formulario*/
                 console.log("xD")
                 const main = document.querySelector("main");
