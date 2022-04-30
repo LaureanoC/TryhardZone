@@ -6,5 +6,5 @@ body.innerHTML = `
                 <input class="header__buscador" type="text" placeholder="¿Que deseas buscar?">  
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <a href="screens/crud.html" class="header__login">Login</a>
+            <a href="#" class="header__login" id="login">Iniciar sesión</a>
         </div>`

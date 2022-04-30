@@ -79,11 +79,21 @@
    
 }
 
-.header__login{
+.header__login, .header__adm{
 
     border: solid #2A7AE4 1px;
     text-align: center;
     color:#2A7AE4;
+    margin-left:auto;
+    padding: 1rem 3.5rem;
+    cursor:pointer;
+}
+
+.header__logout{
+
+    border: solid red 1px;
+    text-align: center;
+    color:red;
     margin-left:auto;
     padding: 1rem 3.5rem;
     cursor:pointer;

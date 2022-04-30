@@ -15,11 +15,27 @@
       "descripcion": "Pokémon tipo Planta",
       "tipo": "p",
       "id": "84fe8a87-0e20-4837-a4de-95afdd144d93"
+    },
+    {
+      "nombre": "Elden Ring",
+      "precio": "5700",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340946/petdvceubvbpovhlh14d.png",
+      "descripcion": "Elden Ring es el nuevo videojuego de FromSoftware, creadores de Dark Souls, Sekiro o Bloodborne. Se trata del nuevo título de acción y rol para un jugador ideado por Hidetaka Miyazaki, que en esta ocasión, estrenará un mundo abierto más grande y ambicioso. Su argumento y mitología están firmados por George R.R. Martin, autor de Canción de hielo y fuego.",
+      "tipo": "v",
+      "id": "821cb15b-4c8f-4c62-8a73-d91308c5abd8"
+    },
+    {
+      "nombre": "Camiseta de G2",
+      "precio": "3000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340971/oppepkcqs5whwoimgged.png",
+      "descripcion": "Camiseta oficial del equipo de Esports G2",
+      "tipo": "c",
+      "id": "9fd136ac-d716-4b27-bd45-8ef33be87cf5"
     }
   ],
   "usuario": [
     {
-      "estado": "true",
+      "estado": "false",
       "usuario": "valentina",
       "password": "ponona pononita",
       "id": 1

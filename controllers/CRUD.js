@@ -555,8 +555,8 @@ const verificarEstado = () => {
             console.log(data[0].estado);*/
             let estado = data[0].estado;
             console.log("el estado es ",estado);
-
             if (estado == "false"){
+                
                 /*Mostrar formulario*/
                 console.log("xD")
                 const main = document.querySelector("main");
@@ -588,7 +588,7 @@ const verificarEstado = () => {
 
 
 
-verificarEstado();
+
 
 const login = (u, p) => {
     userServices.perfilUsuario().then((data) => {
@@ -610,5 +610,7 @@ const login = (u, p) => {
     
 }
 
+
+verificarEstado();
 
 
