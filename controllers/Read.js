@@ -4,7 +4,9 @@ const crearNuevaCard = (nombre, precio, imagen,tipo,id) => {
     const card = document.createElement("div");
     card.className = "categorias__card"
     const contenido = `
+        <a class = "card__redireccion" href="#">
         <img class="card__img"src="${imagen}">
+        </a>
         <p class="card__nombre">${nombre}</p>
         <p class="card__precio">${precio}</p>
         <a class="card__link" href="#">Ver producto</a>    
@@ -34,12 +36,7 @@ const crearSection = (tipoSeccion) => {
         link.innerHTML = `Ver Todo <i class="fa-solid fa-arrow-right"></i>`;
         link.addEventListener("click", () => {
 
-            if(agregado == false){
-                agregado = true;
-                crearModal(section,tipoSeccion);
-                
-                console.log("Haz hecho click en la categoria ", titulo);
-            }
+        console.log("Redireccioname a similar.html");
             
         })
 
