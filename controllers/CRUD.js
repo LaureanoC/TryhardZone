@@ -156,6 +156,9 @@ const crearModal = (link,tipoSeccion) => {
     input.setAttribute("type","file");
     input.setAttribute("name","image");
 
+    const filePreview = document.createElement("img");
+    filePreview.className = "modal__filePreview"
+
     const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/laureano/upload";
     const CLOUDINARY_UPLOAD_PRESET = "eiijfx6t";
     var urlimagen = "";
@@ -172,6 +175,7 @@ const crearModal = (link,tipoSeccion) => {
             }
         }).then((res)=>{
             urlimagen = res.data.secure_url;
+            filePreview.src = res.data.secure_url;
             console.log(urlimagen);
         }).catch(error => console.log(error));
     });
@@ -246,12 +250,14 @@ const crearModal = (link,tipoSeccion) => {
     div.appendChild(label);
     div.appendChild(input);
 
+   
     contenedor.appendChild(h2);
     contenedor.appendChild(icono);
 
     
-
+    
     modal.appendChild(contenedor);
+    modal.appendChild(filePreview);
     modal.appendChild(div);
     modal.appendChild(div1);
     modal.appendChild(div2);
@@ -263,7 +269,7 @@ const crearModal = (link,tipoSeccion) => {
 
 }
 
-const editarModal = (link,tipoSeccion,id,nombre) => {
+const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
 
     const modal = document.createElement("div");
     modal.className = "modal"
@@ -285,19 +291,44 @@ const editarModal = (link,tipoSeccion,id,nombre) => {
         console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
 
     })
+
+    const conjuntoimagenes = document.createElement("div");
+    conjuntoimagenes.className = "modal__fpreview";
     
 
     const div = document.createElement("div");
-    div.className = "modal__formConjunto"
+    div.className = "modal__formConjunto";
 
     const label = document.createElement("label");
-    label.className = "modal__label"
+    label.className = "modal__label";
+    label.id = "fileimg";
     label.setAttribute("for","image");
 
     const input = document.createElement("input");
     input.className = "modal__file"
     input.setAttribute("type","file");
     input.setAttribute("name","image");
+
+    const contenedorImg = document.createElement("div");
+    contenedorImg.className = "modal__contenedorImg";
+    
+    const producoSeleccionado = document.createElement("p");
+    producoSeleccionado.className = "modal__productoSeleccionado";
+    producoSeleccionado.innerHTML = `${nombre}`;
+
+    const actualfilePreview = document.createElement("img");
+    actualfilePreview.className = "modal__filePreview";
+    actualfilePreview.src = imagen;
+   
+    const contenedorImg2 = document.createElement("div");
+    contenedorImg2.className = "modal__contenedorImg";
+
+    const filePreview = document.createElement("img");
+    filePreview.className = "modal__filePreview";
+
+    const producoEdit = document.createElement("p");
+    producoEdit.className = "modal__productoSeleccionado";
+    producoEdit.innerHTML = `Imagen de reemplazo`;
 
     const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/laureano/upload";
     const CLOUDINARY_UPLOAD_PRESET = "eiijfx6t";
@@ -315,6 +346,7 @@ const editarModal = (link,tipoSeccion,id,nombre) => {
             }
         }).then((res)=>{
             urlimagen = res.data.secure_url;
+            filePreview.src = res.data.secure_url;
             console.log(urlimagen);
         }).catch(error => console.log(error));
     });
@@ -386,15 +418,26 @@ const editarModal = (link,tipoSeccion,id,nombre) => {
     div1.appendChild(label1);
     div1.appendChild(input1);
 
+    label.appendChild(input);
     div.appendChild(label);
-    div.appendChild(input);
 
     contenedor.appendChild(h2);
     contenedor.appendChild(icono);
 
+    contenedorImg.appendChild(actualfilePreview);
+    contenedorImg.appendChild(producoSeleccionado);
+
+    contenedorImg2.appendChild(filePreview);
+    contenedorImg2.appendChild(producoEdit);
     
 
+
     modal.appendChild(contenedor);
+
+    conjuntoimagenes.appendChild(contenedorImg);
+    conjuntoimagenes.appendChild(contenedorImg2)
+
+    modal.appendChild(conjuntoimagenes);
     modal.appendChild(div);
     modal.appendChild(div1);
     modal.appendChild(div2);
@@ -402,7 +445,7 @@ const editarModal = (link,tipoSeccion,id,nombre) => {
     modal.appendChild(div4);
     modal.appendChild(agregarb);
 
-    link.appendChild(modal);
+    link.insertAdjacentElement("afterend",(modal));
 
 }
 
@@ -445,7 +488,6 @@ const crearSection = (tipoSeccion) => {
             if(agregado == false){
                 agregado = true;
                 crearModal(section,tipoSeccion);
-                
                 console.log("Haz hecho click en la categoria ", titulo);
             }
             
@@ -482,9 +524,10 @@ const crearNuevaCard = (nombre, precio, imagen,tipo,id) => {
 
         const section = document.querySelector(`[data-section${tipo}]`);
         
+        
         if(editando == false){
             editando = true;
-            editarModal(section,tipo,id,nombre);
+            editarModal(section,tipo,id,nombre,imagen);
         }
         
 

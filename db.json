@@ -47,11 +47,19 @@
       "descripcion": "GTA V (Grand Theft Auto V) es la quinta entrega numerada de la saga superventas de Rockstar Games. Se trata de una aventura de acción de mundo abierto con multitud de misiones en la que encarnamos a tres personajes distintos: Trevor, Michael y Franklin. Además, cuenta con GTA Online, el modo multijugador en lína de GTA 5",
       "tipo": "v",
       "id": "aa6a2dcd-9a80-4a5a-969f-56dec508c30c"
+    },
+    {
+      "nombre": "House of Ashes",
+      "precio": "3000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651356084/mvn8rvyfvoby7f4doiqh.png",
+      "descripcion": "Al final de la guerra de Irak, un equipo de las fuerzas especiales en busca de armas de destrucción masiva desentierra algo mucho peor: un templo sumerio en el que viven criaturas inhumanas. Para sobrevivir a la noche bajo tierra, deberán",
+      "tipo": "v",
+      "id": "9fb0c3f7-5dc0-44d4-aae7-d1742fbe572f"
     }
   ],
   "usuario": [
     {
-      "estado": "false",
+      "estado": "true",
       "usuario": "valentina",
       "password": "ponona pononita",
       "id": 1
