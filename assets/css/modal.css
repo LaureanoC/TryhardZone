@@ -7,10 +7,6 @@
     max-width: 1920px;
 }
 
-#modal::backdrop {
-    background-color: rgba(0,0,0,55);
-}
-
 .modal__titulo{
     font-size: 2rem;
     font-weight: 700;
@@ -67,5 +63,10 @@
 
     color:#A2A2A2;
     margin-left: auto;
+    background-color: #ffffff;
+}
+
+.modal__error {
+    color: red;
 }
 

@@ -1,6 +1,6 @@
 const listaProducto = () => fetch("http://localhost:3000/producto").then((respuesta) => respuesta.json());
 
-const registrarProducto = (nombre, precio, imagen, tipo) => {
+const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
     return fetch("http://localhost:3000/producto", {
         method: "POST",
         headers: {

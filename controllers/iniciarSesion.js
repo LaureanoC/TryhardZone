@@ -2,13 +2,6 @@ import { userServices } from "../service/user-service.js";
 import { productoServices } from "../service/product-service.js";
 
 var agregado = false;
-var estadoErrores = [false,false,false,false];
-
-const borrarError = (tipoinput) => {
-    const p = document.querySelector(`#${tipoinput}`);;
-    p.remove();
-    
-}
 
 const validarTexto = (texto) => {
     if(texto != "") {
@@ -43,29 +36,63 @@ const validarImagen = (urlimg) => {
 
 }
 
-const crearError = (error,tipo) => {
+const crearError = (error) => {
     const p = document.createElement("p");
     p.className = "modal__error";
-    p.id = `${tipo}`;
     p.innerHTML = `${error}`
-    const div = document.querySelector(".modal__agregarP");
-    div.insertAdjacentElement("beforebegin",p);
+    const div = document.querySelector(".modal__contenedorError");
+    div.appendChild(p);
+}
+
+const actualizarPantalla = (estados) => {
+
+    const contenedor = document.querySelector(".modal__contenedorError");
+    contenedor.remove();
+    const contenedor2 = document.createElement("div");
+    contenedor2.className = "modal__contenedorError"
+  
+    const btn = document.querySelector(".modal__agregarP");
+    btn.insertAdjacentElement("beforebegin",contenedor2);
+
+    if(estados[0] == false){
+
+        crearError("Se debe seleccionar un archivo con formato .png .svg ó .jpg");
+    }
+
+    if(estados[1] == false){
+
+        crearError("El campo Nombre del producto no puede estar vacío");
+    }
+
+    if(estados[2] == false){
+
+        crearError("El campo Precio no puede estar vacío y debe contener solo digitos");
+    }
+
+    if(estados[3] == false){
+
+        crearError("El campo Descripción del producto no puede estar vacío");
+    }
+
 }
 
 
 const validarRegistro = (fileDom,nombreDom, precioDom, descripcionDom) => {
 
     let urlfile = fileDom.value;
-    let nombre = [nombreDom.value , "Nombre del producto"];
-    let precio = [precioDom.value, "Precio del producto"];
-    let descripcion = [descripcionDom.value, "Descripción del producto"];
+    let nombre = nombreDom.value
+    let precio = precioDom.value
+    let descripcion = descripcionDom.value
      
     let estadoRegistro = [];
     estadoRegistro.push(validarImagen(urlfile));
-    estadoRegistro.push(validarTexto(nombre[0]));
-    estadoRegistro.push(validarPrecio(precio[0]));
-    estadoRegistro.push(validarTexto(descripcion[0]));
-    console.log(estadoRegistro);
+    estadoRegistro.push(validarTexto(nombre));
+    estadoRegistro.push(validarPrecio(precio));
+    estadoRegistro.push(validarTexto(descripcion));
+    
+    actualizarPantalla(estadoRegistro);
+
+    //console.log(estadoRegistro);
 
     if(estadoRegistro[0] && estadoRegistro[1] && estadoRegistro[2] && estadoRegistro[3]){
         return true
@@ -125,6 +152,26 @@ const crearModal = (link,tipoSeccion) => {
     input.setAttribute("type","file");
     input.setAttribute("name","image");
 
+    const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/laureano/upload";
+    const CLOUDINARY_UPLOAD_PRESET = "eiijfx6t";
+    var urlimagen = "";
+    input.addEventListener("change", (e)=> {
+
+        const file = e.target.files[0];  //Imagen seleccionada
+
+        const formData = new FormData();    
+        formData.append("file",file);
+        formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+        axios.post(CLOUDINARY_URL, formData, {
+            headers:{
+                "Content-Type": "multipart/form-data"
+            }
+        }).then((res)=>{
+            urlimagen = res.data.secure_url;
+            console.log(urlimagen);
+        }).catch(error => console.log(error));
+    });
+
     const div1 = document.createElement("div");
     div1.className = "modal__formConjunto"
 
@@ -161,24 +208,25 @@ const crearModal = (link,tipoSeccion) => {
     input3.setAttribute("name","descripcionp");
     input3.setAttribute("placeholder", "Descripción del producto");
 
+    const div4 = document.createElement("div");
+    div4.className = "modal__contenedorError";
 
     const agregarb = document.createElement("div");
     agregarb.className = "modal__agregarP"
     agregarb.innerHTML = "Agregar producto"
-
     agregarb.addEventListener("click", (evento)=> {
 
         if(validarRegistro(input,input1,input2,input3)){
 
+        productoServices.registrarProducto(urlimagen,input1.value,input2.value,input3.value,tipoSeccion)
+        .then((respuesta) => console.log(respuesta.json()))
+        .catch((error) => console.log(error));
+
+        console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
         evento.target.parentNode.remove();
         agregado = false;
-        console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
-        
-    
-        } else {
-           
-            console.log("PRODUCTO Rechazado");
-        }
+
+        } 
 
     })
 
@@ -197,11 +245,14 @@ const crearModal = (link,tipoSeccion) => {
     contenedor.appendChild(h2);
     contenedor.appendChild(icono);
 
+    
+
     modal.appendChild(contenedor);
     modal.appendChild(div);
     modal.appendChild(div1);
     modal.appendChild(div2);
     modal.appendChild(div3);
+    modal.appendChild(div4);
     modal.appendChild(agregarb);
 
     link.appendChild(modal);

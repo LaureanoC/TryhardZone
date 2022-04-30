@@ -5,28 +5,15 @@
       "precio": "5700",
       "imagen": "../assets/img/videojuegos/eldenRing.png",
       "tipo": "v",
+      "descripcion": "GOAT",
       "id": 1
     },
     {
-      "nombre": "Fifa 22",
+      "nombre": "Fifa22",
       "precio": "6100",
-      "imagen": "../assets/img/videojuegos/fifa22.png",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651311767/t3sjsyztjuhkd3ri3kst.png",
       "tipo": "v",
-      "id": 2
-    },
-    {
-      "nombre": "Camiseta de G2",
-      "precio": "3000",
-      "imagen": "../assets/img/esport/g2-camiseta.png",
-      "tipo": "c",
-      "id": 3
-    },
-    {
-      "nombre": "Peluche Eeve",
-      "precio": "1700",
-      "imagen": "../assets/img/pokemon/eeve.png",
-      "tipo": "p",
-      "id": 4
+      "id": "35b382af-3d24-44e4-baf5-f32ebec979e4"
     }
   ],
   "usuario": [
