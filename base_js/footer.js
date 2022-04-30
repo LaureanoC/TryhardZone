@@ -27,7 +27,4 @@ footer.innerHTML = `
             <button class="formulario__boton">Enviar</div>
     </form>
 
-</div>
-   
-
-<div class="rodapie">Diseñado por Laureano Neyén Chaves 2022 &copy;</div>`
+</div>`

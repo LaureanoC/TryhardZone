@@ -61,3 +61,16 @@
 
     border-color: #2A7AE4;
     }
+
+.form__errores{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    text-align: start;
+
+}
+.form__error{
+    color:red;
+    flex-basis: 100%;
+}

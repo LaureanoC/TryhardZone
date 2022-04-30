@@ -4,6 +4,9 @@ import { productoServices } from "../service/product-service.js";
 var agregado = false;
 var editando = false;
 
+
+
+
 const validarTexto = (texto) => {
     if(texto != "") {
         return true
@@ -548,6 +551,63 @@ const cambiarLogOutALogin = () => {
     })
 }
 
+const crearErrorLog = (error) => {
+    const p = document.createElement("p");
+    p.className = "form__error";
+    p.innerHTML = `${error}`
+    const div = document.querySelector(".form__errores");
+    div.appendChild(p);
+}
+
+const actualizarPantallaLog = (u,p) => {
+
+    const contenedor = document.querySelector(".form__errores");
+    console.log(contenedor)
+    contenedor.remove();
+    const contenedor2 = document.createElement("div");
+    contenedor2.className = "form__errores"
+  
+    const btn = document.querySelector(".form__login");
+    btn.insertAdjacentElement("beforebegin",contenedor2);
+
+    if(validarTexto(u) == false){
+        crearErrorLog("Ingrese un nombre de usuario");
+    }
+
+    if(validarTexto(p) == false){
+        crearErrorLog("Ingrese una contraseña");
+    }
+
+    if (validarTexto(u) && validarTexto(p)){
+        crearErrorLog("Los datos ingresados son incorrectos");
+    }
+    
+
+}
+
+const login = (u, p) => {
+    userServices.perfilUsuario().then((data) => {
+        console.log(data);
+        data.forEach(({usuario, password}) => {
+            console.log(usuario);
+            console.log(password);
+            if(usuario == u){
+                if(password == p){                   
+                    userServices.actualizarEstado(1,true);
+                    window.location.reload();
+                    console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
+                                        // debo agregar cerrar sesión para que tenga sentido
+                } 
+            }
+            
+            actualizarPantallaLog(u,p);
+           
+        })
+        
+    })
+    
+}
+
 const verificarEstado = () => {
         userServices.perfilUsuario().then((data) => {
             /*console.log(data);
@@ -566,9 +626,12 @@ const verificarEstado = () => {
                 <form class="login__form">
                     <input name="usuario" type="text" class="form__usuario" id="usuario" placeholder="Escriba su usuario" data-usuario>
                     <input name="password" type="password" class="form__password" id="password" placeholder="Escriba su contraseña" data-password>
+                    <div class = "form__errores"></div>
                     <button class="form__login">Ingresar</button>
                 </form>
             </section>`
+
+
                 const btnInicioSesion = document.querySelector(".form__login");
                 console.log(btnInicioSesion);
                 btnInicioSesion.addEventListener("click", (evento)=> {
@@ -579,6 +642,7 @@ const verificarEstado = () => {
                     login(user,pass);
                     console.log(user, pass);
                 })
+            
             } else {
                 cambiarLogOutALogin();
                 mostrarProductos();
@@ -590,25 +654,7 @@ const verificarEstado = () => {
 
 
 
-const login = (u, p) => {
-    userServices.perfilUsuario().then((data) => {
-        console.log(data);
-        data.forEach(({usuario, password}) => {
-            console.log(usuario);
-            console.log(password);
-            if(usuario == u){
-                if(password == p){                   
-                    userServices.actualizarEstado(1,true);
-                    window.location.reload();
-                    console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
-                                        // debo agregar cerrar sesión para que tenga sentido
-                } 
-            }     
-        })
-        
-    })
-    
-}
+
 
 
 verificarEstado();
