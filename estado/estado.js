@@ -15,7 +15,7 @@ const crearLogin = () => {
     const a = document.createElement("a");
     a.className = "header__login";
     a.innerHTML = "Iniciar sesión";
-    a.setAttribute("href","../screens/crud.html");
+    a.setAttribute("href","screens/crud.html");
     const sticky = document.querySelector(".sticky__header");
     sticky.appendChild(a);
 
@@ -41,7 +41,7 @@ const crearAdm = () => {
     const a = document.createElement("a");
     a.className = "header__adm";
     a.innerHTML = "Administrar Productos";
-    a.setAttribute("href","../screens/crud.html");
+    a.setAttribute("href","screens/crud.html");
     const sticky = document.querySelector(".sticky__header");
     sticky.appendChild(a);
 
