@@ -136,13 +136,7 @@
     }
 
     .header__conjuntobusqueda{
-
-        display: flex;
-        align-items: center;
-        background-color: rgb(236, 236, 236);
-        border: solid 1px rgb(236, 236, 236);
-        border-radius: 1rem;     
-      
+        display: none;
     }
 
     .header__login{
@@ -210,12 +204,11 @@
     }
 
     .fa-solid{
+        font-size: 2rem; 
+    }
 
-        cursor:pointer;
-        font-size: 2rem;
-        background-color: #FFFFFF;
-        color:#464646;
-       
+    .header__conjuntobusqueda{
+        display: none;
     }
 
 
