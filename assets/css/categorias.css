@@ -42,6 +42,23 @@
     background-color: white;
 }
 
+#borrar{
+    background-color: rgba(0,0,0,0);
+    color: white;
+    position: absolute;
+    float: left;
+    margin-left:9.8rem;
+    margin-top: 8px;
+}
+
+.fa-pencil{
+    background-color: rgba(0,0,0,0);
+    color:white;
+    position: absolute;
+    float: left;
+    margin-left:8rem;
+    margin-top: 8px;
+}
 
 
 .categorias__card{

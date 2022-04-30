@@ -316,7 +316,7 @@ const crearSection = (tipoSeccion) => {
     
 } 
 
-const crearNuevaCard = (nombre, precio, imagen) => {
+const crearNuevaCard = (nombre, precio, imagen,id) => {
     const card = document.createElement("div");
     card.className = "categorias__card"
     const contenido = `
@@ -325,7 +325,23 @@ const crearNuevaCard = (nombre, precio, imagen) => {
         <p class="card__precio">${precio}</p>
         <a class="card__link" href="#">Ver producto</a>    
     `;
+    const iconoPencil = document.createElement("i");
+    iconoPencil.className = "fa-solid fa-pencil";
+
+    const iconoBorrar = document.createElement("i");
+    iconoBorrar.className = "fa-solid fa-xmark";
+    iconoBorrar.id="borrar";
+    iconoBorrar.addEventListener("click", (e)=> {
+
+        e.target.parentNode.remove();
+        productoServices.eliminarProducto(id);
+        console.log("Haz hecho click en ", id);
+
+    })
+
     card.innerHTML = contenido;
+    card.insertAdjacentElement("afterbegin",iconoPencil);
+    card.insertAdjacentElement("afterbegin",iconoBorrar);
     return card
 }
 
@@ -348,9 +364,9 @@ const mostrarProductos = () => {
     
     productoServices.listaProducto().then((data) => {
         console.log(data);
-        data.forEach( ({nombre,precio,imagen,tipo}) => {
+        data.forEach( ({nombre,precio,imagen,tipo,id}) => {
             const div = document.querySelector(`[data-section${tipo}]`);
-            const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
+            const nuevoProducto = crearNuevaCard(nombre,precio,imagen,id);
             div.appendChild(nuevoProducto);
         })
     })

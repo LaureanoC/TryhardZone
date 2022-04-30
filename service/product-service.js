@@ -10,7 +10,15 @@ const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
     });
 }
 
+const eliminarProducto = (id) =>{
+    return fetch(`http://localhost:3000/producto/${id}`, {
+        method: "DELETE",
+    })
+
+
+}
+
 export const productoServices = {
 
-    listaProducto, registrarProducto
+    listaProducto, registrarProducto, eliminarProducto
 }

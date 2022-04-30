@@ -1,19 +1,18 @@
 {
   "producto": [
     {
-      "nombre": "Elden ring",
-      "precio": "5700",
-      "imagen": "../assets/img/videojuegos/eldenRing.png",
-      "tipo": "v",
-      "descripcion": "GOAT",
-      "id": 1
+      "nombre": "Camiseta de G2",
+      "precio": "3000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651312547/jms0e8mldt6drxir5anb.png",
+      "tipo": "c",
+      "id": "e4a6d318-9c8f-4879-ada0-854214c94237"
     },
     {
-      "nombre": "Fifa22",
-      "precio": "6100",
-      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651311767/t3sjsyztjuhkd3ri3kst.png",
-      "tipo": "v",
-      "id": "35b382af-3d24-44e4-baf5-f32ebec979e4"
+      "nombre": "Eeve",
+      "precio": "1300",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651312686/hbbuj6wvesvq9bn0zrde.png",
+      "tipo": "p",
+      "id": "41aa7185-093a-4aa4-89c2-0b1ca2207c03"
     }
   ],
   "usuario": [
