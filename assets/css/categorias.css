@@ -130,6 +130,22 @@
     .fa-arrow-right {
         font-size: 1rem;
     }
+
+    .fa-plus{
+       
+        font-size: 1rem;
+    }
+    
+    #borrar{
+        margin-left:13rem;
+       
+    }
+    
+    .fa-pencil{
+     
+        margin-left:9rem;
+      
+    }
 }
 
 

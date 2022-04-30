@@ -9,11 +9,10 @@
     width: 65%;
     margin: 0 auto;
     display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
+    flex-flow: row wrap;
     max-width: 1920px;
     gap:7rem;
-    
 }
 
 .footer__link{
@@ -24,76 +23,95 @@
 }
 
 .footer__formulario{
-
     display: flex;
-    gap:2rem;
+    gap:1.5rem;
     flex-direction: column;
+
 }
 
 .formulario__titulo{
-
     font-weight: 700;
-
 }
 
 .formulario__conjunto{
     display: flex;
-    flex-direction: column;
-}
-
-
-
-.formulario__label{
-    font-weight: 300;
-    font-size: 0.8rem;
     background-color: #FFFFFF;
-    padding: 0.5rem;
-    border-top-left-radius: 0.5rem;
+    flex-direction: column;
+    border: #FFFFFF solid 1px;
     border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    width: 23rem;
+    border-bottom: 2px solid #A2A2A2;
 }
 
-.formulario__nombre{
 
-    width: 35rem;
-    font-family: Raleway, sans-serif;
-    font-size: 1rem;
+.formulario__label {
+    font-size: 0.7rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    color: #A2A2A2
+}
+
+.formulario__nombre {
     outline: none;
     border: none;
-    background-color: #FFFFFF;
-    padding: 0.5rem;
-    border-bottom: 1px solid rgb(192, 191, 191);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+    padding-left: 0.5rem;
     
 }
 
-.formulario__nombre:focus , .formulario__mensaje:focus{
-
-border-color: #2A7AE4;
+.formulario__nombre:focus {
+    border-color: #2A7AE4;
 }
+
 
 .formulario__mensaje{
+   outline: none;
+   border: none;
+   font-family: 'Raleway', sans-serif;
+   font-size: 1rem;
+   text-align:justify;
+   padding-left: 0.5rem;
+   resize:none;
+   margin-top: 1rem;
+   margin-bottom: 0.2rem;;
+}
 
-    width: 35rem;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    font-family: Raleway, sans-serif;
-    font-size: 1rem;
+#caja {
+    border: 2px solid #A2A2A2;
+}
+
+#cajan:focus-within{
+    border-bottom: 2px solid #2A7AE4;
+}
+
+#caja:focus-within{
+    border: 2px solid #2A7AE4;
+}
+
+.formulario__boton {
+
     outline: none;
     border: none;
-    background-color: #FFFFFF;
-    padding: 0.5rem;
-    resize:none;
-    border-bottom: 1px solid rgb(192, 191, 191);
-    
-}
-.formulario__boton{ 
-
     background-color: #2A7AE4;
-    cursor:pointer;
-    color:#FFFFFF;
-    padding: 1rem 3rem;
-    margin-right: auto;
-
+    padding: 1rem;
+    font-family: 'Raleway',sans-serif;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
+
+.formulario__boton:hover{
+    background-color: #372AE4;
+    transition: 1s;
+}
+
 .rodapie{
     padding: 2.5rem 0;
     text-align: center;
@@ -113,49 +131,6 @@ border-color: #2A7AE4;
         
     }
  
-    .formulario__nombre{
-    
-        width: 20rem;
-        font-family: Raleway, sans-serif;
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        background-color: #FFFFFF;
-        padding: 0.5rem;
-        border-bottom: 1px solid rgb(192, 191, 191);
-        
-    }
-    
-    .formulario__nombre:focus , .formulario__mensaje:focus{
-    
-    border-color: #2A7AE4;
-    }
-    
-    .formulario__mensaje{
-    
-        width: 20rem;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-        font-family: Raleway, sans-serif;
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        background-color: #FFFFFF;
-        padding: 0.5rem;
-        resize:none;
-        border-bottom: 1px solid rgb(192, 191, 191);
-        
-    }
-    .formulario__boton{ 
-    
-        background-color: #2A7AE4;
-        cursor:pointer;
-        color:#FFFFFF;
-        padding: 1rem 3rem;
-        margin-right: auto;
-    
-    }
-  
 
 }
 
@@ -174,47 +149,5 @@ border-color: #2A7AE4;
         
     }
  
-    .formulario__nombre{
-    
-        width: 20rem;
-        font-family: Raleway, sans-serif;
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        background-color: #FFFFFF;
-        padding: 0.5rem;
-        border-bottom: 1px solid rgb(192, 191, 191);
-        
-    }
-    
-    .formulario__nombre:focus , .formulario__mensaje:focus{
-    
-    border-color: #2A7AE4;
-    }
-    
-    .formulario__mensaje{
-    
-        width: 20rem;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-        font-family: Raleway, sans-serif;
-        font-size: 1rem;
-        outline: none;
-        border: none;
-        background-color: #FFFFFF;
-        padding: 0.5rem;
-        resize:none;
-        border-bottom: 1px solid rgb(192, 191, 191);
-        
-    }
-    .formulario__boton{ 
-    
-        background-color: #2A7AE4;
-        cursor:pointer;
-        color:#FFFFFF;
-        padding: 1rem 3rem;
-        margin-right: auto;
-    
-    }
   
 }

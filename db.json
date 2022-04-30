@@ -9,14 +9,6 @@
       "id": "41aa7185-093a-4aa4-89c2-0b1ca2207c03"
     },
     {
-      "nombre": "Leafeon",
-      "precio": "750",
-      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340561/tkgqttwwfsurdd4fwjyz.png",
-      "descripcion": "Pokémon tipo Planta",
-      "tipo": "p",
-      "id": "84fe8a87-0e20-4837-a4de-95afdd144d93"
-    },
-    {
       "nombre": "Elden Ring",
       "precio": "5700",
       "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340946/petdvceubvbpovhlh14d.png",
@@ -59,7 +51,7 @@
   ],
   "usuario": [
     {
-      "estado": "false",
+      "estado": "true",
       "usuario": "valentina",
       "password": "ponona pononita",
       "id": 1
