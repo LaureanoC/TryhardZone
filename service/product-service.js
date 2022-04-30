@@ -6,7 +6,7 @@ const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({nombre,precio,imagen,tipo, id:uuid.v4()}) // Lo transformo en texto
+        body: JSON.stringify({nombre,precio,imagen,descripcion,tipo, id:uuid.v4()}) // Lo transformo en texto
     });
 }
 
@@ -18,7 +18,27 @@ const eliminarProducto = (id) =>{
 
 }
 
+const actualizarProducto = (nombre,precio,imagen,descripcion,tipo,id) => {
+    
+    return fetch(`http://localhost:3000/producto/${id}`,{
+        method:'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({nombre: `${nombre}`,
+        precio:`${precio}`,
+        imagen:`${imagen}`,
+        tipo: `${tipo}`,
+        descripcion: `${descripcion}`,
+        id: `${id}`
+    })
+
+    })
+    .then((respuesta) => console.log(respuesta.json()))
+    .catch((error) => console.log(error));
+}
+
 export const productoServices = {
 
-    listaProducto, registrarProducto, eliminarProducto
+    listaProducto, registrarProducto, eliminarProducto, actualizarProducto
 }

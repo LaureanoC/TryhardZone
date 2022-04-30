@@ -1,18 +1,20 @@
 {
   "producto": [
     {
-      "nombre": "Camiseta de G2",
-      "precio": "3000",
-      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651312547/jms0e8mldt6drxir5anb.png",
-      "tipo": "c",
-      "id": "e4a6d318-9c8f-4879-ada0-854214c94237"
+      "nombre": "Jolteon",
+      "precio": "1000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340594/kanozipfzqe3hnglakuw.png",
+      "tipo": "p",
+      "descripcion": "Pokémon de tipo Eléctrico",
+      "id": "41aa7185-093a-4aa4-89c2-0b1ca2207c03"
     },
     {
-      "nombre": "Eeve",
-      "precio": "1300",
-      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651312686/hbbuj6wvesvq9bn0zrde.png",
+      "nombre": "Leafeon",
+      "precio": "750",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340561/tkgqttwwfsurdd4fwjyz.png",
+      "descripcion": "Pokémon tipo Planta",
       "tipo": "p",
-      "id": "41aa7185-093a-4aa4-89c2-0b1ca2207c03"
+      "id": "84fe8a87-0e20-4837-a4de-95afdd144d93"
     }
   ],
   "usuario": [
