@@ -31,6 +31,14 @@
       "descripcion": "Camiseta oficial del equipo de Esports G2",
       "tipo": "c",
       "id": "9fd136ac-d716-4b27-bd45-8ef33be87cf5"
+    },
+    {
+      "nombre": "FIFA 22",
+      "precio": "6100",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651343366/cznugextd6x7vmilfv0b.png",
+      "descripcion": "FIFA 22 lleva al jugador de regreso a los estadios virtuales del mundo para competir como los mejores equipos de fútbol del mundo. Disfruta de más de 700 equipos de clubes o crea el tuyo propio para enfrentarte al modo Carrera. Enfréntate a jugadores en línea en el modo FIFA Ultimate Team y asciende en las tablas de clasificación con el equipo de tus sueños.",
+      "tipo": "v",
+      "id": "d254cc14-99ef-4f89-8979-273fe4b26bad"
     }
   ],
   "usuario": [
