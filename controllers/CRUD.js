@@ -582,6 +582,8 @@ const logout = () => {
                     userServices.actualizarEstado(1,false);
                                       
         })
+        
+        window.location.reload();
     })
 }
 
@@ -651,6 +653,8 @@ const login = (u, p) => {
             actualizarPantallaLog(u,p);
            
         })
+
+        window.location.reload();
         
     })
     
