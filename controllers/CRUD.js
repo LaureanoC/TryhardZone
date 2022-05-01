@@ -582,9 +582,7 @@ const logout = () => {
                     userServices.actualizarEstado(1,false);
                                       
         })
-        
-      
-    })
+    }).then(window.location(reload));
 }
 
 const cambiarLogOutALogin = () => {
@@ -650,10 +648,10 @@ const login = (u, p) => {
                 } 
             }
             
-            actualizarPantallaLog(u,p);
+            actualizarPantallaLog(u,p);     
            
         })
-    })
+    }).then(window.location(reload));
     
 }
 

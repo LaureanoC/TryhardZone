@@ -6,7 +6,7 @@ const logout = () => {
                     userServices.actualizarEstado(1,false);
                                       
     })
-})
+}).then(window.location(reload));
 }
 
 const crearLogin = () => {
