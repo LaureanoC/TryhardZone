@@ -4,7 +4,7 @@ const perfilUsuario = () => {
 
 const actualizarEstado = (id,status) => {
     
-    return fetch(`https://tryhardzone.herokuapp.com/usuariog/${id}`,{
+    return fetch(`https://tryhardzone.herokuapp.com/usuario/${id}`,{
         method:'PUT',
         headers: {
             'Content-Type': 'application/json',
