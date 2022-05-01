@@ -644,7 +644,7 @@ const login = (u, p) => {
             console.log(password);
             if(usuario == u){
                 if(password == p){                   
-                    userServices.actualizarEstado(1,true);
+                    userServices.actualizarEstado(1,true).then(windows.location(reload));
                     console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
