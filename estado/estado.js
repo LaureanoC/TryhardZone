@@ -4,7 +4,7 @@ const logout = () => {
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
                     userServices.actualizarEstado(1,false);
-                    window.location.reload();                   
+                                      
     })
 })
 }
