@@ -582,8 +582,10 @@ const logout = () => {
                     userServices.actualizarEstado(1,false);
                                       
         })
-        
-        
+    }).then((data) => {
+        console.log(data);
+        console.log("Entro y recargo");
+        window.location.reload();
     })
 }
 
@@ -649,11 +651,13 @@ const login = (u, p) => {
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
             }
-            
             actualizarPantallaLog(u,p);
-           
         })
 
+    }).then((data) => {
+        console.log(data);
+        console.log("Entro y recargo");
+        window.location.reload();
     })
     
 }

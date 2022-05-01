@@ -6,6 +6,10 @@ const logout = () => {
                     userServices.actualizarEstado(1,false);
                                       
     })
+}).then((data) => {
+    console.log(data);
+    console.log("Entro y recargo");
+    window.location.reload();
 })
 }
 
