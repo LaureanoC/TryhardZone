@@ -583,7 +583,7 @@ const logout = () => {
                                       
         })
         
-        window.location.reload();
+      
     })
 }
 
@@ -653,9 +653,6 @@ const login = (u, p) => {
             actualizarPantallaLog(u,p);
            
         })
-
-        window.location.reload();
-        
     })
     
 }
