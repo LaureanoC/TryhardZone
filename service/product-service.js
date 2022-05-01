@@ -1,7 +1,7 @@
-const listaProducto = () => fetch("http://localhost:3000/producto").then((respuesta) => respuesta.json());
+const listaProducto = () => fetch("https://api.npoint.io/dd4ed067c3c12fc228cd/producto").then((respuesta) => respuesta.json());
 
 const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
-    return fetch("http://localhost:3000/producto", {
+    return fetch("https://api.npoint.io/dd4ed067c3c12fc228cd/producto", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -11,7 +11,7 @@ const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
 }
 
 const eliminarProducto = (id) =>{
-    return fetch(`http://localhost:3000/producto/${id}`, {
+    return fetch(`https://api.npoint.io/dd4ed067c3c12fc228cd/producto/${id}`, {
         method: "DELETE",
     })
 
@@ -20,7 +20,7 @@ const eliminarProducto = (id) =>{
 
 const actualizarProducto = (nombre,precio,imagen,descripcion,tipo,id) => {
     
-    return fetch(`http://localhost:3000/producto/${id}`,{
+    return fetch(`https://api.npoint.io/dd4ed067c3c12fc228cd/producto/${id}`,{
         method:'PUT',
         headers: {
             'Content-Type': 'application/json',

@@ -1,10 +1,10 @@
 const perfilUsuario = () => {
-    return fetch("http://localhost:3000/usuario").then((respuesta) => respuesta.json());
+    return fetch("https://api.npoint.io/dd4ed067c3c12fc228cd/usuario").then((respuesta) => respuesta.json());
 }
 
 const actualizarEstado = (id,status) => {
     
-    return fetch(`http://localhost:3000/usuario/${id}`,{
+    return fetch(`https://api.npoint.io/dd4ed067c3c12fc228cd/usuario/${id}`,{
         method:'PUT',
         headers: {
             'Content-Type': 'application/json',

@@ -59,7 +59,7 @@
   ],
   "usuario": [
     {
-      "estado": "true",
+      "estado": "false",
       "usuario": "valentina",
       "password": "ponona pononita",
       "id": 1
