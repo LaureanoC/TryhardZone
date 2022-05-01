@@ -227,8 +227,8 @@ const crearModal = (link,tipoSeccion) => {
         if(validarRegistro(input,input1,input2,input3)){
 
         productoServices.registrarProducto(urlimagen,input1.value,input2.value,input3.value,tipoSeccion)
-        .then((respuesta) => console.log(respuesta.json()))
-        .catch((error) => console.log(error));
+        .then(window.location.reload())
+        .catch((error) => alert(error));
 
         console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
         evento.target.parentNode.remove();
@@ -398,7 +398,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
         if(validarRegistro(input,input1,input2,input3)){
         console.log(id)
         productoServices.actualizarProducto(input1.value,input2.value,urlimagen,input3.value,tipoSeccion,id)
-        .then((respuesta) => console.log(respuesta.json()))
+        .then(window.location.reload())
         .catch((error) => console.log(error));
 
         console.log("PRODUCTO editado ", devolverTipo(tipoSeccion));
@@ -579,7 +579,7 @@ console.log("xd");
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false);
+                    userServices.actualizarEstado(1,false).then(windows.location.reload());
                                       
         })
         
@@ -649,12 +649,9 @@ const login = (u, p) => {
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
             }
-            
-            actualizarPantallaLog(u,p);
-           
+             
         })
-
-        
+        actualizarPantallaLog(u,p); 
     })
     
 }
