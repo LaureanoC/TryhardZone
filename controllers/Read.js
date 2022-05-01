@@ -79,7 +79,7 @@ const mostrarProductos = () => {
             const nuevoProducto = crearNuevaCard(nombre,precio,imagen,tipo,id);
             div.appendChild(nuevoProducto);
         })
-    }).catch(alert("algo ha salido mal"));
+    }).catch((error) => console.log(error));
 console.log("xd");
 }
 
