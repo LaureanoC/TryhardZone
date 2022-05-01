@@ -1,10 +1,10 @@
 const perfilUsuario = () => {
-    return fetch("https://my-json-server.typicode.com/laureanoC/TryhardZone/usuario").then((respuesta) => respuesta.json());
+    return fetch("http://localhost:3000/usuario").then((respuesta) => respuesta.json());
 }
 
 const actualizarEstado = (id,status) => {
     
-    return fetch(`https://my-json-server.typicode.com/laureanoC/TryhardZone/usuario/${id}`,{
+    return fetch(`http://localhost:3000/usuario/${id}`,{
         method:'PUT',
         headers: {
             'Content-Type': 'application/json',

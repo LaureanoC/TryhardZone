@@ -1,7 +1,7 @@
-const listaProducto = () => fetch("https://my-json-server.typicode.com/laureanoC/TryhardZone/producto").then((respuesta) => respuesta.json());
+const listaProducto = () => fetch("http://localhost:3000/producto").then((respuesta) => respuesta.json());
 
 const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
-    return fetch("https://my-json-server.typicode.com/laureanoC/TryhardZone/producto", {
+    return fetch("http://localhost:3000/producto", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -11,7 +11,7 @@ const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
 }
 
 const eliminarProducto = (id) =>{
-    return fetch(`https://my-json-server.typicode.com/laureanoC/TryhardZone/producto/${id}`, {
+    return fetch(`http://localhost:3000/producto/${id}`, {
         method: "DELETE",
     })
 
@@ -20,7 +20,7 @@ const eliminarProducto = (id) =>{
 
 const actualizarProducto = (nombre,precio,imagen,descripcion,tipo,id) => {
     
-    return fetch(`https://my-json-server.typicode.com/laureanoC/TryhardZone/producto/${id}`,{
+    return fetch(`http://localhost:3000/producto/${id}`,{
         method:'PUT',
         headers: {
             'Content-Type': 'application/json',
