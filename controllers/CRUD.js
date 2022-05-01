@@ -579,7 +579,7 @@ console.log("xd");
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false).then(windows.location.reload());
+                    userServices.actualizarEstado(1,false).then(window.location.reload());
                                       
         })
         
@@ -644,7 +644,7 @@ const login = (u, p) => {
             console.log(password);
             if(usuario == u){
                 if(password == p){                   
-                    userServices.actualizarEstado(1,true).then(windows.location(reload));
+                    userServices.actualizarEstado(1,true).then(window.location(reload));
                     console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
