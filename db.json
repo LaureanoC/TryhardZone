@@ -9,14 +9,6 @@
       "id": "41aa7185-093a-4aa4-89c2-0b1ca2207c03"
     },
     {
-      "nombre": "Elden Ring",
-      "precio": "5700",
-      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340946/petdvceubvbpovhlh14d.png",
-      "descripcion": "Elden Ring es el nuevo videojuego de FromSoftware, creadores de Dark Souls, Sekiro o Bloodborne. Se trata del nuevo título de acción y rol para un jugador ideado por Hidetaka Miyazaki, que en esta ocasión, estrenará un mundo abierto más grande y ambicioso. Su argumento y mitología están firmados por George R.R. Martin, autor de Canción de hielo y fuego.",
-      "tipo": "v",
-      "id": "821cb15b-4c8f-4c62-8a73-d91308c5abd8"
-    },
-    {
       "nombre": "Camiseta de G2",
       "precio": "3000",
       "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651340971/oppepkcqs5whwoimgged.png",
@@ -55,6 +47,14 @@
       "descripcion": "Al final de la guerra de Irak, un equipo de las fuerzas especiales en busca de armas de destrucción masiva desentierra algo mucho peor: un templo sumerio en el que viven criaturas inhumanas. Para sobrevivir a la noche bajo tierra, deberán",
       "tipo": "v",
       "id": "9fb0c3f7-5dc0-44d4-aae7-d1742fbe572f"
+    },
+    {
+      "nombre": "Camiseta de C9",
+      "precio": "3100",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651365175/ypi3bogozo9dfyxjwmhk.png",
+      "descripcion": "OAASDAD",
+      "tipo": "c",
+      "id": "1bae6014-c8b3-4045-b1f8-577ddda2a9a9"
     }
   ],
   "usuario": [

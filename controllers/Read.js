@@ -66,21 +66,6 @@ const devolverTipo = (tipoSeccion) => {
 
 }
 
-const crearBotonReferencia = (ref) =>{
-
-    /* <a href="#videojuegos"><div class="banner__boton">Ver videojuegos</div></a>*/
-    const d = document.createElement("div");
-    d.className = "botonRedireccion";
-    d.innerHTML = `Ir a ${devolverTipo(ref)}`
-    const a = document.createElement("a");
-    a.setAttribute("href",`#${ref}`);
-    const main = document.querySelector(".redireccion");
-    a.appendChild(d);
-    main.appendChild(a);
-
-
-}
-
 const mostrarProductos = () => {
 
     crearSection("v");
@@ -94,7 +79,7 @@ const mostrarProductos = () => {
             const nuevoProducto = crearNuevaCard(nombre,precio,imagen,tipo,id);
             div.appendChild(nuevoProducto);
         })
-    })
+    }).catch(alert("algo ha salido mal"));
 console.log("xd");
 }
 
