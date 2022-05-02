@@ -47,6 +47,13 @@
     cursor: pointer;
 }
 
+.modal__agregarP:hover{
+
+background-color: #2D435E;
+transition: 1s;
+
+}
+
 
 
 .modal__tituloconjunto {
@@ -94,6 +101,58 @@
     flex-direction: column;
     
 }
+
+.ancla {
+    padding: 0.5rem 0;
+}
+
+.anclaBoton {
+    display: block;
+    padding: 0.5rem 0;
+    visibility: hidden;
+}
+
+#tituloSeccionAncla {
+
+    margin:0;
+}
+
+.modal__file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.modal__file::before {
+  content: 'Seleccionar imagen';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.modal__file:hover::before {
+  border-color: #2A7AE4;
+  transition: 1;
+}
+
+
+@media (max-width: 450px) {
+
+   .modal{
+       width: 90%;
+   }
+    
+  .anclaBoton{
+    padding: 1.3rem 0;
+  }
+}
+
 
 
 

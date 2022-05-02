@@ -3,9 +3,6 @@
 }
 
 .sticky{
-
-        position: fixed;
-        top: 0;
         background-color: #FFFFFF;
         width: 100% 
 }

@@ -1,6 +1,6 @@
 .banner{
     width: 100%;
-    margin: 6.125rem auto 0 auto;
+    margin:1rem auto 0 auto;
     background-color: #4495ff;
     background-image: url("../img/banner3.png"); 
     box-sizing: border-box;
@@ -49,26 +49,19 @@
     padding: 1rem 3rem;
 }
 
+.banner__boton:hover {
+    background-color: #2D435E;
+    transition: 1s;
+}
+
 @media (min-width:451px) and (max-width:768px) {
 
-    .banner{
-        
-        margin: 6.125rem auto 0 auto;
-        background-color: #4495ff;
-        background-image: url("../img/banner3.png"); 
-        
-    }
     
     .banner__contenido{
 
         width: 90%;
-        max-width: 1920px;
-        margin: 0;
-        display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
-
-
     }
 
 
@@ -77,28 +70,14 @@
 @media (max-width: 450px) {
 
     .banner{
-        
-        margin: 6.125rem auto 0 auto;
-        background-color: #4495ff;
-        background-image: url("../img/banner3.png"); 
-        box-sizing: content-box;
-        background-size: cover;
-        background-position:700px ;
-        
+        background-position:700px ;  
     }
     
     .banner__contenido{
 
         width: 90%;
-        max-width: 1920px;
-        margin: 0;
-        display: flex;
         flex-flow: column nowrap;
         align-items: flex-start;
-        
-
     }
-
-
 
 }

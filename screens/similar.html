@@ -5,35 +5,30 @@
 <head>
 </head>
 <body>
-<header class="sticky"></header>
+    <header class="sticky">
+        <div class="sticky__header">
+            <a href="index.html"><p class="header__logo"></p></a>
+            <div class="header__conjuntobusqueda">
+                <input class="header__buscador" type="text" placeholder="¿Que deseas buscar?">  
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </header> 
+
+    <main data-main class="espaciado">
+
+    </main>
+
 <section class="producto">
     <img class="producto__imagen" src="../assets/img/videojuegos/eldenRing.png">
     <p class="producto__descripcion">Elden Ring Elden Ring Elden Ring Eldenaaaaaaaaaaaaaa Ring Elden Ring Elden Ring Elden Ring<p>
 </section>
 
-<div class="categorias__contenido">
-        <div class="categorias__header">
-        <h2 class="categorias__titulo">Videojuegos Similares</h2>
-        <a class="categorias__link" href="#"> Ver todo <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-
-        <div class="categorias__card">
-            <img class="card__img"src="assets/img/videojuegos/eldenRing.png">
-            <p class="card__nombre">Elden Ring</p>
-            <p class="card__precio">5700</p>
-            <a class="card__link" href="#">Ver producto</a>
-        </div>
-
-        <div class="categorias__card">
-            <img class="card__img"src="assets/img/videojuegos/eldenRing.png">
-            <p class="card__nombre">Elden Ring</p>
-            <p class="card__precio">5700</p>
-            <a class="card__link" href="#">Ver producto</a>
-        </div>
-</div>
+<section></section>
 
 <footer class="footer"></footer>
-<script src="../base_js/header.js"></script>
 <script src="../base_js/footer.js"></script>
+<script type="module" src="../estado/estadoSimilar.js"></script>
+
 </body>
 </html>

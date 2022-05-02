@@ -33,6 +33,8 @@
 
 }
 
+
+
 .fa-arrow-right {
     color:#2A7AE4;
     background-color: white;
@@ -88,6 +90,12 @@
 
 .card__img{
     background-color: whitesmoke;
+}
+
+.borrarCard {
+    opacity: 0;
+    transition:0.5s;
+    
 }
 
 @media (min-width:451px) and (max-width:768px) {

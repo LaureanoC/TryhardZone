@@ -122,6 +122,10 @@ const devolverTipo = (tipoSeccion) => {
 
 const crearModal = (link,tipoSeccion) => {
 
+    const modalRef = document.createElement("a");
+    modalRef.setAttribute("name",`${tipoSeccion}agregar`);
+    modalRef.className = "ancla";
+
     const modal = document.createElement("div");
     modal.className = "modal"
     modal.id = "modal";
@@ -139,6 +143,7 @@ const crearModal = (link,tipoSeccion) => {
 
         evento.target.parentNode.parentNode.remove();
         agregado = false;
+        window.location.href = `#${tipoSeccion}`;
         console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
 
     })
@@ -255,7 +260,8 @@ const crearModal = (link,tipoSeccion) => {
     contenedor.appendChild(icono);
 
     
-    
+    modal.appendChild(modalRef);
+
     modal.appendChild(contenedor);
     modal.appendChild(filePreview);
     modal.appendChild(div);
@@ -264,12 +270,17 @@ const crearModal = (link,tipoSeccion) => {
     modal.appendChild(div3);
     modal.appendChild(div4);
     modal.appendChild(agregarb);
-
+    
     link.appendChild(modal);
 
 }
 
 const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
+
+    const modalRef = document.createElement("a");
+    modalRef.setAttribute("name",`${tipoSeccion}editar`);
+    modalRef.className = "ancla";
+
 
     const modal = document.createElement("div");
     modal.className = "modal"
@@ -288,6 +299,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
 
         evento.target.parentNode.parentNode.remove();
         editando = false;
+        window.location.href = `#${tipoSeccion}`;
         console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
 
     })
@@ -398,12 +410,13 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
         if(validarRegistro(input,input1,input2,input3)){
         console.log(id)
         productoServices.actualizarProducto(input1.value,input2.value,urlimagen,input3.value,tipoSeccion,id)
-        .then((respuesta) => { window.location.reload()})
+        .then(() => { window.location.reload()})
         .catch((error) => console.log(error));
 
         console.log("PRODUCTO editado ", devolverTipo(tipoSeccion));
         evento.target.parentNode.remove();
         editando = false;
+        
 
         } 
 
@@ -430,7 +443,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
     contenedorImg2.appendChild(filePreview);
     contenedorImg2.appendChild(producoEdit);
     
-
+    modal.appendChild(modalRef);
 
     modal.appendChild(contenedor);
 
@@ -470,16 +483,24 @@ const crearSection = (tipoSeccion) => {
    
     const referencia = document.createElement("a");
     referencia.setAttribute("name",`${tipoSeccion}`);
+    referencia.className = "anclaBoton";
+
     const section = document.createElement("section");
         section.className = "categorias";
+
         const div = document.createElement("div");
         div.className = "categorias__contenido";
         div.setAttribute(`data-section${tipoSeccion}`,``);
+
     const div2 = document.createElement("div");
             div2.className = "categorias__header";
+            
+
     const h2 = document.createElement("h2");
         h2.className = "categorias__titulo";
         h2.innerHTML = `${titulo}`;
+        h2.id = "tituloSeccionAncla";
+
     const link = document.createElement("a");
         link.className = "categorias__link";
         link.innerHTML = `Agregar producto <i class="fa-solid fa-plus"></i>`;
@@ -488,6 +509,7 @@ const crearSection = (tipoSeccion) => {
             if(agregado == false){
                 agregado = true;
                 crearModal(section,tipoSeccion);
+                window.location.href = `#${tipoSeccion}agregar`;
                 console.log("Haz hecho click en la categoria ", titulo);
             }
             
@@ -496,9 +518,10 @@ const crearSection = (tipoSeccion) => {
     const main = document.querySelector("[data-main]");
     div2.appendChild(h2);
     div2.appendChild(link);
+    div.appendChild(referencia);
     div.appendChild(div2);
+   
     section.appendChild(div);
-    main.appendChild(referencia);
     main.appendChild(section);
 
     
@@ -528,6 +551,7 @@ const crearNuevaCard = (nombre, precio, imagen,tipo,id) => {
         if(editando == false){
             editando = true;
             editarModal(section,tipo,id,nombre,imagen);
+            window.location.href = `#${tipo}editar`; 
         }
         
 
@@ -537,13 +561,12 @@ const crearNuevaCard = (nombre, precio, imagen,tipo,id) => {
     iconoBorrar.className = "fa-solid fa-xmark";
     iconoBorrar.id="borrar";
     iconoBorrar.addEventListener("click", (e)=> {
-
-        e.target.parentNode.remove();
+        e.target.parentNode.classList.add("borrarCard");
+        setTimeout(()=>e.target.parentNode.remove(),1000);
         productoServices.eliminarProducto(id);
-        console.log("Haz hecho click en ", id);
+       // console.log("Haz hecho click en ", id);
 
     })
-
     card.innerHTML = contenido;
     card.insertAdjacentElement("afterbegin",iconoPencil);
     card.insertAdjacentElement("afterbegin",iconoBorrar);

@@ -1,8 +1,9 @@
 import { productoServices } from "../service/product-service.js";
 
-const crearNuevaCard = (nombre, precio, imagen,tipo,id) => {
+const crearNuevaCard = (nombre, precio, imagen) => {
     const card = document.createElement("div");
-    card.className = "categorias__card"
+    card.className = "categorias__card";
+    card.id = "producto";
     const contenido = `
         <a class = "card__redireccion" href="#">
         <img class="card__img"src="${imagen}">
@@ -73,14 +74,32 @@ const mostrarProductos = () => {
     crearSection("p");
 
     productoServices.listaProducto().then((data) => {
-        console.log(data);
-        data.forEach( ({nombre,precio,imagen,tipo,id}) => {
-            const div = document.querySelector(`[data-section${tipo}]`);
-            const nuevoProducto = crearNuevaCard(nombre,precio,imagen,tipo,id);
-            div.appendChild(nuevoProducto);
+        let i = 0;
+        let j = 0;
+        let k = 0;
+        data.forEach( ({nombre,precio,imagen,tipo}) => {
+                if ( (i <= 5) && (tipo == "v")){
+                    console.log("XDD");
+                    const div = document.querySelector(`[data-section${tipo}]`);
+                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
+                    div.appendChild(nuevoProducto);
+                    i++
+                }
+                if ( (j <= 5) && (tipo == "c")){
+                    const div = document.querySelector(`[data-section${tipo}]`);
+                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
+                    div.appendChild(nuevoProducto);
+                    j++;
+                }
+                if ( (k <= 5) && (tipo == "p")){
+                    console.log("XDD");
+                    const div = document.querySelector(`[data-section${tipo}]`);
+                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
+                    div.appendChild(nuevoProducto);
+                    k++;
+                }      
         })
     }).catch((error) => console.log(error));
-console.log("xd");
 }
 
 mostrarProductos();

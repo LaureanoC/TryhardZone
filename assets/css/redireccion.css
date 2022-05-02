@@ -1,6 +1,6 @@
 .redireccion {
     width: 65%;
-    margin: 8rem auto 1rem auto;
+    margin: 1rem auto 0rem auto;
     display: flex;
     align-items: center;
     flex-flow: row;
@@ -14,13 +14,18 @@
     color:white;
 }
 
+.botonRedireccion:hover {
+    background-color: #2D435E;
+    transition: 1s;
+}
+
 @media (max-width: 450px) {
 
     .redireccion {
         width: 90%;
         margin: 0 auto;
+        margin-bottom: 1.4rem;
         display: flex;
-    
         gap:2rem 1rem;
         max-width: 1920px;
     }
