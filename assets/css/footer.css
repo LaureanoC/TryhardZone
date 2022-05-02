@@ -38,8 +38,7 @@
     background-color: #FFFFFF;
     flex-direction: column;
     border: #FFFFFF solid 1px;
-    border-top-right-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
+    
     width: 23rem;
     border-bottom: 2px solid #A2A2A2;
 }
