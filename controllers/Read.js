@@ -37,7 +37,7 @@ const crearSection = (tipoSeccion) => {
         link.innerHTML = `Ver Todo <i class="fa-solid fa-arrow-right"></i>`;
         link.addEventListener("click", () => {
 
-        console.log("Redireccioname a similar.html");
+        //console.log("Redireccioname a similar.html");
             
         })
 
@@ -79,7 +79,7 @@ const mostrarProductos = () => {
         let k = 0;
         data.forEach( ({nombre,precio,imagen,tipo}) => {
                 if ( (i <= 5) && (tipo == "v")){
-                    console.log("XDD");
+                    
                     const div = document.querySelector(`[data-section${tipo}]`);
                     const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
                     div.appendChild(nuevoProducto);
@@ -92,7 +92,7 @@ const mostrarProductos = () => {
                     j++;
                 }
                 if ( (k <= 5) && (tipo == "p")){
-                    console.log("XDD");
+                    
                     const div = document.querySelector(`[data-section${tipo}]`);
                     const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
                     div.appendChild(nuevoProducto);

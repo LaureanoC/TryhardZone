@@ -144,7 +144,7 @@ const crearModal = (link,tipoSeccion) => {
         evento.target.parentNode.parentNode.remove();
         agregado = false;
         window.location.href = `#${tipoSeccion}`;
-        console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
+        //console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
 
     })
     
@@ -181,7 +181,7 @@ const crearModal = (link,tipoSeccion) => {
         }).then((res)=>{
             urlimagen = res.data.secure_url;
             filePreview.src = res.data.secure_url;
-            console.log(urlimagen);
+            //console.log(urlimagen);
         }).catch(error => console.log(error));
     });
 
@@ -235,7 +235,7 @@ const crearModal = (link,tipoSeccion) => {
         .then(() => { window.location.reload()})
         .catch((error) => console.log(error));
 
-        console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
+        //console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
         evento.target.parentNode.remove();
         agregado = false;
 
@@ -300,7 +300,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen,precio,descripcion) => {
         evento.target.parentNode.parentNode.remove();
         editando = false;
         window.location.href = `#${tipoSeccion}`;
-        console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
+        //console.log("Haz hecho click en agregar producto ", devolverTipo(tipoSeccion));
 
     })
 
@@ -359,7 +359,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen,precio,descripcion) => {
         }).then((res)=>{
             urlimagen = res.data.secure_url;
             filePreview.src = res.data.secure_url;
-            console.log(urlimagen);
+           // console.log(urlimagen);
         }).catch(error => console.log(error));
     });
 
@@ -411,12 +411,12 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen,precio,descripcion) => {
     agregarb.addEventListener("click", (evento)=> {
 
         if(validarRegistro(input,input1,input2,input3)){
-        console.log(id)
+        //console.log(id)
         productoServices.actualizarProducto(input1.value,input2.value,urlimagen,input3.value,tipoSeccion,id)
         .then(() => { window.location.reload()})
         .catch((error) => console.log(error));
 
-        console.log("PRODUCTO editado ", devolverTipo(tipoSeccion));
+        //console.log("PRODUCTO editado ", devolverTipo(tipoSeccion));
         evento.target.parentNode.remove();
         editando = false;
         
@@ -515,7 +515,7 @@ const crearSection = (tipoSeccion) => {
                 agregado = true;
                 crearModal(section,tipoSeccion);
                 window.location.href = `#${tipoSeccion}agregar`;
-                console.log("Haz hecho click en la categoria ", titulo);
+                //console.log("Haz hecho click en la categoria ", titulo);
             }
             
         })
@@ -594,7 +594,7 @@ const mostrarProductos = () => {
     crearSection("p");
 
     productoServices.listaProducto().then((data) => {
-        console.log(data);
+        //console.log(data);
         data.forEach( ({nombre,precio,imagen,tipo,id,descripcion}) => {
             const div = document.querySelector(`[data-section${tipo}]`);
             const nuevoProducto = crearNuevaCard(nombre,precio,imagen,tipo,id,descripcion);
@@ -638,7 +638,7 @@ const crearErrorLog = (error) => {
 const actualizarPantallaLog = (u,p) => {
 
     const contenedor = document.querySelector(".form__errores");
-    console.log(contenedor)
+    //console.log(contenedor)
     contenedor.remove();
     const contenedor2 = document.createElement("div");
     contenedor2.className = "form__errores"
@@ -666,23 +666,24 @@ const actualizarPantallaLog = (u,p) => {
 
 const login = (u, p) => {
     userServices.perfilUsuario().then((data) => {
-        console.log("Primera promisa");
-        console.log(data);
+        //console.log("Primera promisa");
+        //console.log(data);
         data.forEach(({usuario, password}) => {
-            console.log(usuario);
-            console.log(password);
+            //console.log(usuario);
+            //console.log(password);
             if(usuario == u){
                 if(password == p){                   
                     userServices.actualizarEstado(1,true).then(()=>{ 
                         window.location.reload();
-                    console.log("La promisa de arriba es actualizar estado") });
-                    console.log("Primera promisa luego de actualizar estado"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
+                    /*console.log("La promisa de arriba es actualizar estado")*/ 
+                });
+                    //console.log("Primera promisa luego de actualizar estado"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
             }  
         })
         actualizarPantallaLog(u,p);
-        console.log("Segunda promisa");
+        //console.log("Segunda promisa");
     });
     
 }
@@ -693,11 +694,11 @@ const verificarEstado = () => {
             console.log(data[0]);
             console.log(data[0].estado);*/
             let estado = data[0].estado;
-            console.log("el estado es ",estado);
+            //console.log("el estado es ",estado);
             if (estado == "false"){
 
                 /*Mostrar formulario*/
-                console.log("xD")
+                console.log("Valu te amo <3");
                 const main = document.querySelector("main");
                 main.innerHTML = `   
                 <section class="login">
@@ -712,14 +713,16 @@ const verificarEstado = () => {
 
 
                 const btnInicioSesion = document.querySelector(".form__login");
-                console.log(btnInicioSesion);
+                //console.log(btnInicioSesion);
                 btnInicioSesion.addEventListener("click", (evento)=> {
                     evento.preventDefault();
-                    const user = document.querySelector("[data-usuario]").value;
+                    let user = document.querySelector("[data-usuario]").value;
+                    user = user.toLowerCase();
+                
                     const pass = document.querySelector("[data-password]").value;
-                    console.log(user, pass);
+                   
                     login(user,pass);
-                    console.log(user, pass);
+                    
                 })
             
             } else {
@@ -728,13 +731,6 @@ const verificarEstado = () => {
             }
         });
 }
-
-
-
-
-
-
-
 
 verificarEstado();
 
