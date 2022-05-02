@@ -227,7 +227,7 @@ const crearModal = (link,tipoSeccion) => {
         if(validarRegistro(input,input1,input2,input3)){
 
         productoServices.registrarProducto(urlimagen,input1.value,input2.value,input3.value,tipoSeccion)
-        .then((respuesta) => console.log(respuesta.json()))
+        .then(() => { window.location.reload()})
         .catch((error) => console.log(error));
 
         console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
@@ -398,7 +398,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
         if(validarRegistro(input,input1,input2,input3)){
         console.log(id)
         productoServices.actualizarProducto(input1.value,input2.value,urlimagen,input3.value,tipoSeccion,id)
-        .then((respuesta) => console.log(respuesta.json()))
+        .then((respuesta) => { window.location.reload()})
         .catch((error) => console.log(error));
 
         console.log("PRODUCTO editado ", devolverTipo(tipoSeccion));
@@ -573,13 +573,15 @@ const mostrarProductos = () => {
             div.appendChild(nuevoProducto);
         })
     })
-console.log("xd");
+
 }
 
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false);
+                    userServices.actualizarEstado(1,false).then(()=>{
+                        window.location.reload();
+                    });
                                       
         })
     })
@@ -636,23 +638,24 @@ const actualizarPantallaLog = (u,p) => {
 
 const login = (u, p) => {
     userServices.perfilUsuario().then((data) => {
+        console.log("Primera promisa");
         console.log(data);
         data.forEach(({usuario, password}) => {
             console.log(usuario);
             console.log(password);
             if(usuario == u){
                 if(password == p){                   
-                    userServices.actualizarEstado(1,true);
-                    console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
+                    userServices.actualizarEstado(1,true).then(()=>{ 
+                        window.location.reload();
+                    console.log("La promisa de arriba es actualizar estado") });
+                    console.log("Primera promisa luego de actualizar estado"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
-            }
-            
-            actualizarPantallaLog(u,p);
-           
+            }  
         })
-        
-    })
+        actualizarPantallaLog(u,p);
+        console.log("Segunda promisa");
+    });
     
 }
 

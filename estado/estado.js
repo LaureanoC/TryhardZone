@@ -3,7 +3,9 @@ import { userServices } from "../service/user-service.js";
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false);
+                    userServices.actualizarEstado(1,false).then(()=> {
+                        window.location.reload();
+                    });
                                       
     })
 })
