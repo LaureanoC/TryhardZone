@@ -1,5 +1,6 @@
 import { userServices } from "../service/user-service.js";
 
+
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
