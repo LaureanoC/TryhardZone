@@ -227,7 +227,7 @@ const crearModal = (link,tipoSeccion) => {
         if(validarRegistro(input,input1,input2,input3)){
 
         productoServices.registrarProducto(urlimagen,input1.value,input2.value,input3.value,tipoSeccion)
-        .then(window.location.reload())
+        .then()
         .catch((error) => alert(error));
 
         console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
@@ -398,7 +398,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
         if(validarRegistro(input,input1,input2,input3)){
         console.log(id)
         productoServices.actualizarProducto(input1.value,input2.value,urlimagen,input3.value,tipoSeccion,id)
-        .then(window.location.reload())
+        .then((response)=> console.log(response))
         .catch((error) => console.log(error));
 
         console.log("PRODUCTO editado ", devolverTipo(tipoSeccion));
@@ -579,7 +579,7 @@ console.log("xd");
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false).then(window.location.reload());
+                    userServices.actualizarEstado(1,false).then();
                                       
         })
         
@@ -644,7 +644,7 @@ const login = (u, p) => {
             console.log(password);
             if(usuario == u){
                 if(password == p){                   
-                    userServices.actualizarEstado(1,true).then(window.location.reload());
+                    userServices.actualizarEstado(1,true).then((data)=>console.log(data.json()));
                     console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
