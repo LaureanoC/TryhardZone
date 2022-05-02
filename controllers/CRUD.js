@@ -275,7 +275,7 @@ const crearModal = (link,tipoSeccion) => {
 
 }
 
-const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
+const editarModal = (link,tipoSeccion,id,nombre,imagen,precio,descripcion) => {
 
     const modalRef = document.createElement("a");
     modalRef.setAttribute("name",`${tipoSeccion}editar`);
@@ -374,6 +374,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
     input1.className = "modal__input"
     input1.setAttribute("name","nombrep");
     input1.setAttribute("placeholder", "Nombre del producto");
+    input1.value = nombre;
 
     const div2 = document.createElement("div");
     div2.className = "modal__formConjunto"
@@ -386,6 +387,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
     input2.className = "modal__input"
     input2.setAttribute("name","preciop");
     input2.setAttribute("placeholder", "Ingrese precio del producto");
+    input2.value = precio;
 
     const div3 = document.createElement("div");
     div3.className = "modal__formConjunto"
@@ -398,6 +400,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
     input3.className = "modal__input"
     input3.setAttribute("name","descripcionp");
     input3.setAttribute("placeholder", "Descripción del producto");
+    input3.value = descripcion;
 
     const div4 = document.createElement("div");
     div4.className = "modal__contenedorError";
@@ -421,6 +424,8 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
         } 
 
     })
+
+    
 
     div3.appendChild(label3);
     div3.appendChild(input3);
@@ -528,7 +533,7 @@ const crearSection = (tipoSeccion) => {
     
 } 
 
-const crearNuevaCard = (nombre, precio, imagen,tipo,id) => {
+const crearNuevaCard = (nombre, precio, imagen,tipo,id,descripcion) => {
     const card = document.createElement("div");
     card.className = "categorias__card"
     const contenido = `
@@ -550,7 +555,7 @@ const crearNuevaCard = (nombre, precio, imagen,tipo,id) => {
         
         if(editando == false){
             editando = true;
-            editarModal(section,tipo,id,nombre,imagen);
+            editarModal(section,tipo,id,nombre,imagen,precio,descripcion);
             window.location.href = `#${tipo}editar`; 
         }
         
@@ -590,9 +595,9 @@ const mostrarProductos = () => {
 
     productoServices.listaProducto().then((data) => {
         console.log(data);
-        data.forEach( ({nombre,precio,imagen,tipo,id}) => {
+        data.forEach( ({nombre,precio,imagen,tipo,id,descripcion}) => {
             const div = document.querySelector(`[data-section${tipo}]`);
-            const nuevoProducto = crearNuevaCard(nombre,precio,imagen,tipo,id);
+            const nuevoProducto = crearNuevaCard(nombre,precio,imagen,tipo,id,descripcion);
             div.appendChild(nuevoProducto);
         })
     })
