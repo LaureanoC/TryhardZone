@@ -11,7 +11,7 @@ const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
 }
 
 const eliminarProducto = (id) =>{
-    return fetch(`http://localhost:3000/producto/${id}`, {
+    return fetch(`https://tryhardzone.herokuapp.com/producto/${id}`, {
         method: "DELETE",
     })
 

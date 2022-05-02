@@ -227,8 +227,8 @@ const crearModal = (link,tipoSeccion) => {
         if(validarRegistro(input,input1,input2,input3)){
 
         productoServices.registrarProducto(urlimagen,input1.value,input2.value,input3.value,tipoSeccion)
-        .then()
-        .catch((error) => alert(error));
+        .then((respuesta) => console.log(respuesta.json()))
+        .catch((error) => console.log(error));
 
         console.log("PRODUCTO Agregado ", devolverTipo(tipoSeccion));
         evento.target.parentNode.remove();
@@ -398,7 +398,7 @@ const editarModal = (link,tipoSeccion,id,nombre,imagen) => {
         if(validarRegistro(input,input1,input2,input3)){
         console.log(id)
         productoServices.actualizarProducto(input1.value,input2.value,urlimagen,input3.value,tipoSeccion,id)
-        .then((response)=> console.log(response))
+        .then((respuesta) => console.log(respuesta.json()))
         .catch((error) => console.log(error));
 
         console.log("PRODUCTO editado ", devolverTipo(tipoSeccion));
@@ -579,11 +579,9 @@ console.log("xd");
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
         data.forEach(() => {
-                    userServices.actualizarEstado(1,false).then();
+                    userServices.actualizarEstado(1,false);
                                       
         })
-        
-       
     })
 }
 
@@ -644,14 +642,16 @@ const login = (u, p) => {
             console.log(password);
             if(usuario == u){
                 if(password == p){                   
-                    userServices.actualizarEstado(1,true).then((data)=>console.log(data.json()));
+                    userServices.actualizarEstado(1,true);
                     console.log("true"); //Aquí debo hacer una petición para modificar el estado del usuario tamb
                                         // debo agregar cerrar sesión para que tenga sentido
                 } 
             }
-             
+            
+            actualizarPantallaLog(u,p);
+           
         })
-        actualizarPantallaLog(u,p); 
+        
     })
     
 }
