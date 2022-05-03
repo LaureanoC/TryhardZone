@@ -34,8 +34,6 @@ const crearNuevaCard = (nombre, precio, imagen,id) => {
             setTimeout(()=> {
                 window.location.reload();
             }, 500);
-           
-
         })
 
     const img = document.createElement("img");
@@ -55,7 +53,9 @@ const crearNuevaCard = (nombre, precio, imagen,id) => {
         a.innerHTML = "Ver producto"
         a.setAttribute("href",`similar.html#${id}`);
         a.addEventListener("click", ()=> {
-            window.location.reload();
+            setTimeout(()=> {
+                window.location.reload();
+            }, 500);
         })
 
     aimg.appendChild(img);
