@@ -5,7 +5,7 @@ Este es el diseño original del proyecto propuesto: https://www.figma.com/file/N
 
 Todas las imagenes fueron sacadas de internet, ninguna me pertenece. Solo las edite.
 
-###### Si eliminas una producto subela de nuevo. Ve a Imaganes para subir, descarga la imagen. Y subila con los datos en lista.txt
+###### Si eliminas un producto subelo de nuevo. Ve a Imaganes para subir, descarga la imagen. Y subila con los datos en lista.txt
 
 usuario: valentina
 contraseña: ponona pononita
