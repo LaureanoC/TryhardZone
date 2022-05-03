@@ -1,18 +1,19 @@
 import { productoServices } from "../service/product-service.js";
 
-const crearNuevaCard = (nombre, precio, imagen) => {
+const crearNuevaCard = (nombre, precio, imagen,id) => {
     const card = document.createElement("div");
     card.className = "categorias__card";
     card.id = "producto";
     const contenido = `
-        <a class = "card__redireccion" href="#">
+        <a class = "card__redireccion" href="screens/similar.html#${id}">
         <img class="card__img"src="${imagen}">
         </a>
         <p class="card__nombre">${nombre}</p>
         <p class="card__precio">${precio}</p>
-        <a class="card__link" href="#">Ver producto</a>    
+        <a class="card__link" href="screens/similar.html#${id}">Ver producto</a>    
     `;
     card.innerHTML = contenido;
+
     return card
 }
 
@@ -77,24 +78,24 @@ const mostrarProductos = () => {
         let i = 0;
         let j = 0;
         let k = 0;
-        data.forEach( ({nombre,precio,imagen,tipo}) => {
+        data.forEach( ({nombre,precio,imagen,tipo,id}) => {
                 if ( (i <= 5) && (tipo == "v")){
                     
                     const div = document.querySelector(`[data-section${tipo}]`);
-                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
+                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen,id);
                     div.appendChild(nuevoProducto);
                     i++
                 }
                 if ( (j <= 5) && (tipo == "c")){
                     const div = document.querySelector(`[data-section${tipo}]`);
-                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
+                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen,id);
                     div.appendChild(nuevoProducto);
                     j++;
                 }
                 if ( (k <= 5) && (tipo == "p")){
                     
                     const div = document.querySelector(`[data-section${tipo}]`);
-                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen);
+                    const nuevoProducto = crearNuevaCard(nombre,precio,imagen,id);
                     div.appendChild(nuevoProducto);
                     k++;
                 }      

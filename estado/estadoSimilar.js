@@ -53,7 +53,6 @@ const verificarEstado = () => {
 
     userServices.perfilUsuario().then((data) => {
         let estado = data[0].estado;
-        console.log("el estado es ",estado);
         if (estado == "false"){
             crearLogin();
         }

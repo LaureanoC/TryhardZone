@@ -42,7 +42,6 @@
     background-color: #FFFFFF;
     flex-direction: column;
     border: #FFFFFF solid 1px;
-    
     width: 23rem;
     border-bottom: 2px solid #A2A2A2;
 }
@@ -64,6 +63,11 @@
     padding: 0.3rem;
     padding-left: 0.5rem;
     
+}
+
+#cajan{
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
 }
 
 .formulario__nombre:focus {
@@ -109,6 +113,8 @@
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
+
+
 
 .formulario__boton:hover{
     background-color: #2D435E;
