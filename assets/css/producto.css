@@ -3,7 +3,6 @@
     margin: 2rem auto;
     display: flex;
     align-items: flex-start;
-
     flex-flow: row;
     gap:1rem;;
     max-width: 1920px;
@@ -43,4 +42,30 @@
     font-size: 2.5rem;
     font-weight: 700;
     flex-basis: 100%;
+}
+
+
+
+
+@media (min-width:451px) and (max-width:768px) {
+
+   
+   
+}
+
+@media (max-width: 450px) {
+
+.producto {
+    width: 90%;
+    flex-flow: column;
+    
+}
+
+.producto__imagen{
+
+    align-self: center;
+    
+    flex-basis: 100%;
+    
+}
 }
