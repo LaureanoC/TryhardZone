@@ -134,9 +134,10 @@ const validarBusqueda  = () => {
    
     let url = window.location.href;
     //console.log(url);
-    //let aux = "#";
-    //console.log(url.indexOf(aux));
-    let parametros = url.slice(43);
+    let aux = "#";
+    let pos = url.indexOf(aux)+1;
+    console.log(url.indexOf(aux));
+    let parametros = url.slice(pos);
     if (idR.test(parametros)){
         return parametros
     } else {
