@@ -655,7 +655,7 @@ const actualizarPantallaLog = (u,p) => {
     }
 
     if (validarTexto(u) && validarTexto(p)){
-        if((u != "valentina") && (p != "ponona pononita")){
+        if((u != "valentina") || (p != "ponona pononita")){
             crearErrorLog("Los datos ingresados son incorrectos");
         }
         
