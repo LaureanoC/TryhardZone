@@ -113,6 +113,10 @@
         
     }
 
+    .categorias__header{
+        margin-top: 1.5rem;
+    }
+
     .fa-arrow-right {
         font-size: 1rem;
     }

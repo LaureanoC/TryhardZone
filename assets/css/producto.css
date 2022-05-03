@@ -50,6 +50,18 @@
 @media (min-width:451px) and (max-width:768px) {
 
    
+.producto {
+    width: 90%;
+    flex-flow: column;
+    
+}
+
+.producto__imagen{
+
+    align-self: center;
+    
+    
+}
    
 }
 
