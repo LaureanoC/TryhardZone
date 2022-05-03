@@ -1,0 +1,30 @@
+Camiseta de G2
+3000
+Camiseta oficial del equipo de Esports G2.
+
+Camiseta de C9
+3100
+Camiseta oficial del equipo de Esports Cloud9.
+
+Camiseta de KOI
+6100
+Camiseta oficial del equipo de Esports KOI.
+
+Camiseta de Team Liquid
+3200
+Camiseta oficial del equipo de Esports Team Liquid.
+
+Camiseta de DWG
+3000
+Camiseta oficial del equipo de Esports DAMWON Gaming.
+
+Camiseta de FNATIC
+2700
+Camiseta oficial del equipo de Esports FNATIC.
+
+Camiseta de GenG
+2900
+Camiseta oficial del equipo de Esports GenG.
+
+
+

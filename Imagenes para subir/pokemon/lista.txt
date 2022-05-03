@@ -1,0 +1,47 @@
+Jolteon
+1000
+Pokémon de tipo eléctrico.
+
+Sylveon
+1300
+Peluche Pokémon de tipo hada.
+
+Vaporeon
+1400
+Peluche Pokémon de tipo agua.
+
+Espeon
+1000
+Peluche Pokémon de tipo psíquico.
+
+Eeve
+1000
+Peluche Pokémon de tipo normal.
+
+Umbreon
+1500
+Peluche Pokémon de tipo siniestro.
+
+Flareon
+1000
+Peluche Pokémon de tipo fuego.
+
+Leafeon
+900
+Peluche Pokémon de tipo planta.
+
+Glaceon
+1100
+Peluche Pokémon de tipo hielo.
+
+Charmander
+1400
+Peluche Pokémon de tipo fuego.
+
+Squirtle
+1400
+Peluche Pokémon de tipo agua.
+
+Pikachu
+1400
+Peluche Pokémon de tipo eléctrico.
