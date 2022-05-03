@@ -5,12 +5,12 @@ const crearNuevaCard = (nombre, precio, imagen,id) => {
     card.className = "categorias__card";
     card.id = "producto";
     const contenido = `
-        <a class = "card__redireccion" href="similar.html#${id}">
+        <a class = "card__redireccion" href="screens/similar.html#${id}">
         <img class="card__img"src="${imagen}">
         </a>
         <p class="card__nombre">${nombre}</p>
         <p class="card__precio">${precio}</p>
-        <a class="card__link" href="similar.html#${id}">Ver producto</a>    
+        <a class="card__link" href="screens/similar.html#${id}">Ver producto</a>    
     `;
     card.innerHTML = contenido;
 

@@ -112,7 +112,7 @@ const mostrarSimilares = () => {
         section.appendChild(h2);
         
 
-        respuesta.forEach(({id,nombre,precio,imagen,descripcion,tipo}) => {
+        respuesta.forEach(({id,nombre,precio,imagen,tipo}) => {
 
             if ((tipo == tipoProducto) && (id !=idparametro)){
 
@@ -124,7 +124,7 @@ const mostrarSimilares = () => {
         })
         main.appendChild(section);
 
-    })
+    }).catch((error) => console.log(error));
 
 }
 
