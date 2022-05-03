@@ -537,12 +537,12 @@ const crearNuevaCard = (nombre, precio, imagen,tipo,id,descripcion) => {
     const card = document.createElement("div");
     card.className = "categorias__card"
     const contenido = `
-    <a class = "card__redireccion" href="#">
+    <a class = "card__redireccion" href="similar.html#${id}">
         <img class="card__img"src="${imagen}">
     </a>
         <p class="card__nombre">${nombre}</p>
         <p class="card__precio">${precio}</p>
-        <a class="card__link" href="#">Ver producto</a>
+        <a class="card__link" href="similar.html#${id}">Ver producto</a>
         
     `;
     const iconoPencil = document.createElement("i");
