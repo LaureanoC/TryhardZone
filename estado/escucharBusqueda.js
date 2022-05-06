@@ -2,6 +2,7 @@ import { productoServices } from "../service/product-service.js";
 import { ProductoIdNombre } from "../Class/ProductoIDNombre.js";
 
 var url = validarLocation();
+console.log("La url dentro de similar es", url);
 var buscando = false;
 
 const buscarCoincidencia  = (palabra,palabraIngresada) => {
@@ -28,6 +29,15 @@ const crearBloque = (id,nombre) => {
     a.setAttribute("href",`${url}similar.html#${id}`);
     a.className = "busqueda__aencontrada";
     a.appendChild(productoNombre);
+
+    if (""==url){
+        a.addEventListener("click", ()=> {
+            setTimeout(()=> {
+                window.location.reload();
+            }, 500);
+        })
+    }
+
     div.appendChild(a);
    
 }
