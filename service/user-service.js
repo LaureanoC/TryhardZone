@@ -1,11 +1,10 @@
-//https://tryhardzone.herokuapp.com/usuario
 const perfilUsuario = () => {
-    return fetch("http://localhost:3000/usuario").then((respuesta) => respuesta.json());
+    return fetch("https://tryhardzone.herokuapp.com/usuario").then((respuesta) => respuesta.json());
 }
 
 const actualizarEstado = (id,status) => {
     
-    return fetch(`http://localhost:3000/usuario/${id}`,{
+    return fetch(`https://tryhardzone.herokuapp.com/usuario/${id}`,{
         method:'PUT',
         headers: {
             'Content-Type': 'application/json',

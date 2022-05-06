@@ -44,6 +44,15 @@
     flex-basis: 100%;
 }
 
+.tituloTodosProductos {
+    
+        width: 65%;
+        margin: 1rem auto 0rem auto;
+        max-width: 1920px;
+        font-size: 3rem;
+        font-weight: 700;
+    
+}
 
 
 

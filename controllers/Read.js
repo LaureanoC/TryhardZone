@@ -38,7 +38,7 @@ const crearSection = (tipoSeccion) => {
         link.innerHTML = `Ver Todo <i class="fa-solid fa-arrow-right"></i>`;
         link.addEventListener("click", () => {
 
-        //console.log("Redireccioname a similar.html");
+        window.location.href = "screens/todos.html";
             
         })
 
