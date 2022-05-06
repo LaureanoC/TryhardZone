@@ -130,6 +130,9 @@
     cursor:pointer;
 }
 
+#lupa {
+    display: none;
+}
 
 
 @media (min-width:451px) and (max-width:768px) {
@@ -215,17 +218,6 @@
         
     }
 
-    .header__conjuntobusqueda{
-
-        order: 3;
-        display: flex;
-        align-items: center;
-        background-color: #FFFFFF;
-        border: solid 1px #FFFFFF;
-        border-radius: 1rem;     
-      
-    }
-
     .header__login{
 
         border: solid #2A7AE4 1px;
@@ -236,12 +228,17 @@
         cursor:pointer;
     }
 
+
     .fa-solid{
         font-size: 2rem; 
     }
 
     .header__conjuntobusqueda{
         display: none;
+    }
+
+    .header__adm, .header__logout {
+        padding: 1rem;
     }
 
 

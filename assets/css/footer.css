@@ -126,6 +126,8 @@
     text-align: center;
 }
 
+
+
 @media (min-width:451px) and (max-width:768px) {
 
     .footer__contenido{
@@ -157,6 +159,10 @@
         gap:2rem;
         
     }
- 
+
+    
+
+   
+
   
 }
