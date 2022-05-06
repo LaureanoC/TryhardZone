@@ -5,6 +5,7 @@ body.innerHTML = `
             <div class="header__conjuntobusqueda">
                 <input class="header__buscador" type="text" placeholder="¿Que deseas buscar?">  
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="busqueda"></div>
             </div>
             <a href="#" class="header__login" id="login">Iniciar sesión</a>
         </div>`

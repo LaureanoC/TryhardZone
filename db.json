@@ -1,261 +1,260 @@
-{"producto":[
+{
+  "producto": [
     {
-    "nombre": "Jolteon",
-    "precio": "1000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592144/hnjzlojw8ispqokbi7sv.png",
-    "tipo": "p",
-    "descripcion": "Pokémon de tipo eléctrico.",
-    "id": "41aa7185-093a-4aa4-89c2-0b1ca2207c03"
+      "nombre": "Jolteon",
+      "precio": "1000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592144/hnjzlojw8ispqokbi7sv.png",
+      "tipo": "p",
+      "descripcion": "Pokémon de tipo eléctrico.",
+      "id": "41aa7185-093a-4aa4-89c2-0b1ca2207c03"
     },
     {
-    "nombre": "Camiseta de G2",
-    "precio": "3000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651611257/g2-camiseta_ul4yc1.png",
-    "descripcion": "Camiseta oficial del equipo de Esports G2",
-    "tipo": "c",
-    "id": "9fd136ac-d716-4b27-bd45-8ef33be87cf5"
+      "nombre": "Camiseta de G2",
+      "precio": "3000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651611257/g2-camiseta_ul4yc1.png",
+      "descripcion": "Camiseta oficial del equipo de Esports G2",
+      "tipo": "c",
+      "id": "9fd136ac-d716-4b27-bd45-8ef33be87cf5"
     },
     {
-    "nombre": "Camiseta de C9",
-    "precio": "3100",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651591944/cx3mrcbyplzsoiyuwclt.png",
-    "tipo": "c",
-    "descripcion": "Camiseta oficial del equipo de Esports Cloud9.",
-    "id": "1bae6014-c8b3-4045-b1f8-577ddda2a9a9"
+      "nombre": "Camiseta de C9",
+      "precio": "3100",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651591944/cx3mrcbyplzsoiyuwclt.png",
+      "tipo": "c",
+      "descripcion": "Camiseta oficial del equipo de Esports Cloud9.",
+      "id": "1bae6014-c8b3-4045-b1f8-577ddda2a9a9"
     },
     {
-    "nombre": "Camiseta de KOI",
-    "precio": "6100",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592009/ydy18olqvnscdskwyzez.png",
-    "tipo": "c",
-    "descripcion": "Camiseta oficial del equipo de Esports KOI.",
-    "id": "09696a33-4c8d-40e7-b11a-48b2df90ea5f"
+      "nombre": "Camiseta de KOI",
+      "precio": "6100",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592009/ydy18olqvnscdskwyzez.png",
+      "tipo": "c",
+      "descripcion": "Camiseta oficial del equipo de Esports KOI.",
+      "id": "09696a33-4c8d-40e7-b11a-48b2df90ea5f"
     },
     {
-    "nombre": "Camiseta de Team Liquid",
-    "precio": "3200",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651591580/kconqw0y9el5ykmidbbr.png",
-    "tipo": "c",
-    "descripcion": "Camiseta oficial del equipo de Esports Team Liquid.",
-    "id": "2726dcc1-81fd-4d1d-b6e5-7d772a0508d3"
+      "nombre": "Camiseta de Team Liquid",
+      "precio": "3200",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651591580/kconqw0y9el5ykmidbbr.png",
+      "tipo": "c",
+      "descripcion": "Camiseta oficial del equipo de Esports Team Liquid.",
+      "id": "2726dcc1-81fd-4d1d-b6e5-7d772a0508d3"
     },
     {
-    "nombre": "Camiseta de DWG",
-    "precio": "3000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651591531/fwkmymcrnr8zqkhlkxq1.png",
-    "descripcion": "Camiseta oficial del equipo de Esports DAMWON Gaming.",
-    "tipo": "c",
-    "id": "68a510f0-09b7-4ec9-8050-2cd82edd6277"
+      "nombre": "Camiseta de DWG",
+      "precio": "3000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651591531/fwkmymcrnr8zqkhlkxq1.png",
+      "descripcion": "Camiseta oficial del equipo de Esports DAMWON Gaming.",
+      "tipo": "c",
+      "id": "68a510f0-09b7-4ec9-8050-2cd82edd6277"
     },
     {
-    "nombre": "Camiseta de FNATIC",
-    "precio": "2700",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592413/yhjfvexxswgbilgiwztl.png",
-    "tipo": "c",
-    "descripcion": "Camiseta oficial del equipo de Esports FNATIC.",
-    "id": "8047cf67-7fee-4dbd-9815-c7f9e25a2f3c"
+      "nombre": "Camiseta de FNATIC",
+      "precio": "2700",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592413/yhjfvexxswgbilgiwztl.png",
+      "tipo": "c",
+      "descripcion": "Camiseta oficial del equipo de Esports FNATIC.",
+      "id": "8047cf67-7fee-4dbd-9815-c7f9e25a2f3c"
     },
     {
-    "nombre": "Camiseta de GenG",
-    "precio": "2900",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592303/zuh5ery9bjxdkoahojys.png",
-    "descripcion": "Camiseta oficial del equipo de Esports GenG.",
-    "tipo": "c",
-    "id": "744811dd-ab50-4aef-81dd-12ad65fee795"
+      "nombre": "Camiseta de GenG",
+      "precio": "2900",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592303/zuh5ery9bjxdkoahojys.png",
+      "descripcion": "Camiseta oficial del equipo de Esports GenG.",
+      "tipo": "c",
+      "id": "744811dd-ab50-4aef-81dd-12ad65fee795"
     },
     {
-    "nombre": "Sylveon",
-    "precio": "1300",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592510/pmrlhh1kqlmfyoqauof6.png",
-    "descripcion": "Peluche Pokémon de tipo hada.",
-    "tipo": "p",
-    "id": "58277869-b303-4726-983c-82a451cc2b5e"
+      "nombre": "Sylveon",
+      "precio": "1300",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592510/pmrlhh1kqlmfyoqauof6.png",
+      "descripcion": "Peluche Pokémon de tipo hada.",
+      "tipo": "p",
+      "id": "58277869-b303-4726-983c-82a451cc2b5e"
     },
     {
-    "nombre": "Vaporeon",
-    "precio": "1400",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592555/ppcevkdcwfb8awy04fi4.png",
-    "descripcion": "Peluche Pokémon de tipo agua.",
-    "tipo": "p",
-    "id": "6d5783b7-2496-4669-9c62-1337956fe5c1"
+      "nombre": "Vaporeon",
+      "precio": "1400",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592555/ppcevkdcwfb8awy04fi4.png",
+      "descripcion": "Peluche Pokémon de tipo agua.",
+      "tipo": "p",
+      "id": "6d5783b7-2496-4669-9c62-1337956fe5c1"
     },
     {
-    "nombre": "Espeon",
-    "precio": "1000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592592/y9nkr2kmtygnuc7gwoc9.png",
-    "descripcion": "Peluche Pokémon de tipo psíquico.",
-    "tipo": "p",
-    "id": "2d384958-1e2c-4729-8370-722a785c4390"
+      "nombre": "Espeon",
+      "precio": "1000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592592/y9nkr2kmtygnuc7gwoc9.png",
+      "descripcion": "Peluche Pokémon de tipo psíquico.",
+      "tipo": "p",
+      "id": "2d384958-1e2c-4729-8370-722a785c4390"
     },
     {
-    "nombre": "Eeve",
-    "precio": "1000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592620/qtt4stzdcvauq7n6oiym.png",
-    "descripcion": "Peluche Pokémon de tipo normal.",
-    "tipo": "p",
-    "id": "3be977d5-5cfe-434e-8f60-19fe84beca47"
+      "nombre": "Eeve",
+      "precio": "1000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592620/qtt4stzdcvauq7n6oiym.png",
+      "descripcion": "Peluche Pokémon de tipo normal.",
+      "tipo": "p",
+      "id": "3be977d5-5cfe-434e-8f60-19fe84beca47"
     },
     {
-    "nombre": "Umbreon",
-    "precio": "1500",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592643/gjtepc2j6vysknssrbzc.png",
-    "descripcion": "Peluche Pokémon de tipo siniestro.",
-    "tipo": "p",
-    "id": "070fd986-81a5-4004-9a77-9b68f7bf9b3a"
+      "nombre": "Umbreon",
+      "precio": "1500",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592643/gjtepc2j6vysknssrbzc.png",
+      "descripcion": "Peluche Pokémon de tipo siniestro.",
+      "tipo": "p",
+      "id": "070fd986-81a5-4004-9a77-9b68f7bf9b3a"
     },
     {
-    "nombre": "Flareon",
-    "precio": "1000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592673/t3kbgbinpl5slkus4vzz.png",
-    "descripcion": "Peluche Pokémon de tipo fuego.",
-    "tipo": "p",
-    "id": "958abe30-fbfa-43b3-b994-d6b150667d47"
+      "nombre": "Flareon",
+      "precio": "1000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592673/t3kbgbinpl5slkus4vzz.png",
+      "descripcion": "Peluche Pokémon de tipo fuego.",
+      "tipo": "p",
+      "id": "958abe30-fbfa-43b3-b994-d6b150667d47"
     },
     {
-    "nombre": "Leafeon",
-    "precio": "900",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592719/dsgy7a9rzzxnehrayd0j.png",
-    "descripcion": "Peluche Pokémon de tipo planta.",
-    "tipo": "p",
-    "id": "e01fc863-0d6c-4736-9223-5e13173007ea"
+      "nombre": "Leafeon",
+      "precio": "900",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592719/dsgy7a9rzzxnehrayd0j.png",
+      "descripcion": "Peluche Pokémon de tipo planta.",
+      "tipo": "p",
+      "id": "e01fc863-0d6c-4736-9223-5e13173007ea"
     },
     {
-    "nombre": "Glaceon",
-    "precio": "1100",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592746/tqwid0qcxhshumbncqgw.png",
-    "descripcion": "Peluche Pokémon de tipo hielo",
-    "tipo": "p",
-    "id": "be5e7314-e7c0-4e18-9534-42d88f8fbe74"
+      "nombre": "Glaceon",
+      "precio": "1100",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592746/tqwid0qcxhshumbncqgw.png",
+      "descripcion": "Peluche Pokémon de tipo hielo",
+      "tipo": "p",
+      "id": "be5e7314-e7c0-4e18-9534-42d88f8fbe74"
     },
     {
-    "nombre": "Charmander",
-    "precio": "1400",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592773/pzredznl7vffeq3i7gax.png",
-    "descripcion": "Peluche Pokémon de tipo fuego.",
-    "tipo": "p",
-    "id": "3330b18a-bbff-46c9-8e9d-1954a3f3b7c0"
+      "nombre": "Charmander",
+      "precio": "1400",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592773/pzredznl7vffeq3i7gax.png",
+      "descripcion": "Peluche Pokémon de tipo fuego.",
+      "tipo": "p",
+      "id": "3330b18a-bbff-46c9-8e9d-1954a3f3b7c0"
     },
     {
-    "nombre": "Squirtle",
-    "precio": "1400",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592802/jwh9smo00kevlqk0p6t4.png",
-    "descripcion": "Peluche Pokémon de tipo agua.",
-    "tipo": "p",
-    "id": "450e1d28-0b5a-4e87-87e3-7c43eb0b7c58"
+      "nombre": "Squirtle",
+      "precio": "1400",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592802/jwh9smo00kevlqk0p6t4.png",
+      "descripcion": "Peluche Pokémon de tipo agua.",
+      "tipo": "p",
+      "id": "450e1d28-0b5a-4e87-87e3-7c43eb0b7c58"
     },
     {
-    "nombre": "Pikachu",
-    "precio": "1400",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592828/mrdaq0m0sihq8wmlqsl2.png",
-    "descripcion": "Peluche Pokémon de tipo eléctrico.",
-    "tipo": "p",
-    "id": "ad2cebc2-9f88-41b4-9062-c220b52a2cca"
+      "nombre": "Pikachu",
+      "precio": "1400",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651592828/mrdaq0m0sihq8wmlqsl2.png",
+      "descripcion": "Peluche Pokémon de tipo eléctrico.",
+      "tipo": "p",
+      "id": "ad2cebc2-9f88-41b4-9062-c220b52a2cca"
     },
     {
-    "nombre": "Elden Ring",
-    "precio": "4000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593116/i0viq3gfpu2xiqn391lr.png",
-    "descripcion": "Levántate, tiznado, y déjate guiar por la gracia para esgrimir el poder del Anillo de Elden y convertirte en un Señor de Elden en las Tierras Intermedias.",
-    "tipo": "v",
-    "id": "5485d28e-aaa8-48c0-bab3-63d70d1e5179"
+      "nombre": "Elden Ring",
+      "precio": "4000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593116/i0viq3gfpu2xiqn391lr.png",
+      "descripcion": "Levántate, tiznado, y déjate guiar por la gracia para esgrimir el poder del Anillo de Elden y convertirte en un Señor de Elden en las Tierras Intermedias.",
+      "tipo": "v",
+      "id": "5485d28e-aaa8-48c0-bab3-63d70d1e5179"
     },
     {
-    "nombre": "FIFA 22",
-    "precio": "5500",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593199/k5s6mcumzcixbadjmgxw.png",
-    "descripcion": "FIFA 22 lleva al jugador de regreso a los estadios virtuales del mundo para competir como los mejores equipos de fútbol del mundo. Disfruta de más de 700 equipos de clubes o crea el tuyo propio para enfrentarte al modo Carrera. Enfréntate a jugadores en línea en el modo FIFA Ultimate Team y asciende en las tablas de clasificación con el equipo de tus sueños.",
-    "tipo": "v",
-    "id": "eec18fcb-a6e1-41a3-b361-fb7cba3559d0"
+      "nombre": "FIFA 22",
+      "precio": "5500",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593199/k5s6mcumzcixbadjmgxw.png",
+      "descripcion": "FIFA 22 lleva al jugador de regreso a los estadios virtuales del mundo para competir como los mejores equipos de fútbol del mundo. Disfruta de más de 700 equipos de clubes o crea el tuyo propio para enfrentarte al modo Carrera. Enfréntate a jugadores en línea en el modo FIFA Ultimate Team y asciende en las tablas de clasificación con el equipo de tus sueños.",
+      "tipo": "v",
+      "id": "eec18fcb-a6e1-41a3-b361-fb7cba3559d0"
     },
     {
-    "nombre": "Horizon Forbidden West",
-    "precio": "6700",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593328/znhxjxt1q64xiacld8ix.png",
-    "tipo": "v",
-    "descripcion": "Únete a Aloy mientras desafía el Oeste Prohibido, una frontera majestuosa, aunque peligrosa, en la que se ocultan nuevas y misteriosas amenazas. Explora tierras remotas, enfréntate a máquinas más grandes e imponentes y descubre increíbles tribus en tu regreso a un futuro lejano en el mundo apocalíptico de Horizon.",
-    "id": "773980e5-e172-4aae-9318-35c4060eb4e9"
+      "nombre": "Horizon Forbidden West",
+      "precio": "6700",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593328/znhxjxt1q64xiacld8ix.png",
+      "tipo": "v",
+      "descripcion": "Únete a Aloy mientras desafía el Oeste Prohibido, una frontera majestuosa, aunque peligrosa, en la que se ocultan nuevas y misteriosas amenazas. Explora tierras remotas, enfréntate a máquinas más grandes e imponentes y descubre increíbles tribus en tu regreso a un futuro lejano en el mundo apocalíptico de Horizon.",
+      "id": "773980e5-e172-4aae-9318-35c4060eb4e9"
     },
     {
-    "nombre": "God of War",
-    "precio": "4200",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593343/exbwbhfvhliogswdpvvb.png",
-    "descripcion": "El Dios de la Guerra ha cambiado… Este no es el Kratos que conoces. Adéntrate en una aventura compleja y desconocida en la que explorarás una impresionante versión alternativa de una historia clásica. Únete a Kratos en un profundo viaje de reflexión, crecimiento, violencia y el deseo de convertirse en un hombre mejor por su hijo. En un mundo de monstruos, dragones y dioses, el peso de la responsabilidad recae sobre tus hombros. Y cuando tu vida está marcada por la sangre y el caos, ¿cómo puedes evitar los errores del pasado para proteger tu futuro?",
-    "tipo": "v",
-    "id": "5eb11ad4-9047-4bac-8b9b-51180826f499"
+      "nombre": "God of War",
+      "precio": "4200",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593343/exbwbhfvhliogswdpvvb.png",
+      "descripcion": "El Dios de la Guerra ha cambiado… Este no es el Kratos que conoces. Adéntrate en una aventura compleja y desconocida en la que explorarás una impresionante versión alternativa de una historia clásica. Únete a Kratos en un profundo viaje de reflexión, crecimiento, violencia y el deseo de convertirse en un hombre mejor por su hijo. En un mundo de monstruos, dragones y dioses, el peso de la responsabilidad recae sobre tus hombros. Y cuando tu vida está marcada por la sangre y el caos, ¿cómo puedes evitar los errores del pasado para proteger tu futuro?",
+      "tipo": "v",
+      "id": "5eb11ad4-9047-4bac-8b9b-51180826f499"
     },
     {
-    "nombre": "House of Ashes",
-    "precio": "2300",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593386/tba4guwywsxvdm84qp3y.png",
-    "descripcion": "Al final de la guerra de Irak, las Fuerzas Especiales que buscan armas de destrucción masiva descubren algo mucho más letal: un templo sumerio enterrado con un nido de criaturas sobrenaturales. Para sobrevivir a la noche bajo tierra, deben forjar una hermandad con sus enemigos del mundo de arriba.",
-    "tipo": "v",
-    "id": "d4e929a0-5040-4313-884f-026b7fee3c0d"
+      "nombre": "House of Ashes",
+      "precio": "2300",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593386/tba4guwywsxvdm84qp3y.png",
+      "descripcion": "Al final de la guerra de Irak, las Fuerzas Especiales que buscan armas de destrucción masiva descubren algo mucho más letal: un templo sumerio enterrado con un nido de criaturas sobrenaturales. Para sobrevivir a la noche bajo tierra, deben forjar una hermandad con sus enemigos del mundo de arriba.",
+      "tipo": "v",
+      "id": "d4e929a0-5040-4313-884f-026b7fee3c0d"
     },
     {
-    "nombre": "Resident Evil Village",
-    "precio": "2500",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593477/oghproq8qnczpuy8daok.png",
-    "descripcion": "Experimenta el terror de supervivencia como nunca antes en la octava entrega principal de la franquicia Resident Evil: Resident Evil Village. Con gráficos detallados, intensa acción en primera persona y una narración magistral, el terror nunca se había sentido más realista.",
-    "tipo": "v",
-    "id": "616881df-eaf1-4bf6-bc68-d7ce0344d94a"
+      "nombre": "Resident Evil Village",
+      "precio": "2500",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593477/oghproq8qnczpuy8daok.png",
+      "descripcion": "Experimenta el terror de supervivencia como nunca antes en la octava entrega principal de la franquicia Resident Evil: Resident Evil Village. Con gráficos detallados, intensa acción en primera persona y una narración magistral, el terror nunca se había sentido más realista.",
+      "tipo": "v",
+      "id": "616881df-eaf1-4bf6-bc68-d7ce0344d94a"
     },
     {
-    "nombre": "Remnant from the Ashes",
-    "precio": "900",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593537/xqybxsqalt4f7xgecye4.png",
-    "descripcion": "El mundo ha sido sumido en el caos por un antiguo mal de otra dimensión. Como uno de los últimos remanentes de la humanidad, debes partir solo o junto a otros dos sobrevivientes para enfrentarte a hordas de enemigos mortales para intentar establecer un punto de apoyo, reconstruir y recuperar lo que se perdió.",
-    "tipo": "v",
-    "id": "07d14a33-7c03-492f-9617-2af244847e98"
+      "nombre": "Remnant from the Ashes",
+      "precio": "900",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593537/xqybxsqalt4f7xgecye4.png",
+      "descripcion": "El mundo ha sido sumido en el caos por un antiguo mal de otra dimensión. Como uno de los últimos remanentes de la humanidad, debes partir solo o junto a otros dos sobrevivientes para enfrentarte a hordas de enemigos mortales para intentar establecer un punto de apoyo, reconstruir y recuperar lo que se perdió.",
+      "tipo": "v",
+      "id": "07d14a33-7c03-492f-9617-2af244847e98"
     },
     {
-    "nombre": "Dark Souls III",
-    "precio": "3000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593595/focsw7f7rkk5xi5c79gx.png",
-    "descripcion": "Dark Souls continúa ampliando los límites con el último y ambicioso capítulo de la serie aclamada por la crítica y que define el género. ¡Prepárate y abraza la oscuridad!",
-    "tipo": "v",
-    "id": "66eeaaef-bc26-4c7d-9f8f-5ceb28e7c379"
+      "nombre": "Dark Souls III",
+      "precio": "3000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593595/focsw7f7rkk5xi5c79gx.png",
+      "descripcion": "Dark Souls continúa ampliando los límites con el último y ambicioso capítulo de la serie aclamada por la crítica y que define el género. ¡Prepárate y abraza la oscuridad!",
+      "tipo": "v",
+      "id": "66eeaaef-bc26-4c7d-9f8f-5ceb28e7c379"
     },
     {
-    "nombre": "Dark Souls II",
-    "precio": "2000",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593665/jqvlvmgfyf8udlnaj81r.png",
-    "descripcion": "DARK SOULS™ II: Scholar of the First Sin lleva la famosa oscuridad y el apasionante juego de la franquicia a un nuevo nivel. Únase al viaje oscuro y experimente abrumadores encuentros con enemigos, peligros diabólicos y desafíos implacables.",
-    "tipo": "v",
-    "id": "240af239-f422-4141-9458-1a2af2382952"
+      "nombre": "Dark Souls II",
+      "precio": "2000",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593665/jqvlvmgfyf8udlnaj81r.png",
+      "descripcion": "DARK SOULS™ II: Scholar of the First Sin lleva la famosa oscuridad y el apasionante juego de la franquicia a un nuevo nivel. Únase al viaje oscuro y experimente abrumadores encuentros con enemigos, peligros diabólicos y desafíos implacables.",
+      "tipo": "v",
+      "id": "240af239-f422-4141-9458-1a2af2382952"
     },
     {
-    "nombre": "Dark Souls",
-    "precio": "1200",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593711/qvcb6tfww0z8wztn1jgu.png",
-    "descripcion": "Entonces, hubo fuego. Vuelva a experimentar el juego aclamado por la crítica que definió el género y que lo inició todo. Bellamente remasterizado, regresa a Lordran con impresionantes detalles de alta definición a 60 fps.",
-    "tipo": "v",
-    "id": "138a1aae-c059-42f2-9ca5-c4a5b2a454e4"
+      "nombre": "Dark Souls",
+      "precio": "1200",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593711/qvcb6tfww0z8wztn1jgu.png",
+      "descripcion": "Entonces, hubo fuego. Vuelva a experimentar el juego aclamado por la crítica que definió el género y que lo inició todo. Bellamente remasterizado, regresa a Lordran con impresionantes detalles de alta definición a 60 fps.",
+      "tipo": "v",
+      "id": "138a1aae-c059-42f2-9ca5-c4a5b2a454e4"
     },
     {
-    "nombre": "GTA V",
-    "precio": "1500",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593832/a2p6rqjgcz9yt77k6cpg.png",
-    "descripcion": "GTA V (Grand Theft Auto V) es la quinta entrega numerada de la saga superventas de Rockstar Games. Se trata de una aventura de acción de mundo abierto con multitud de misiones en la que encarnamos a tres personajes distintos: Trevor, Michael y Franklin. Además, cuenta con GTA Online, el modo multijugador en lína de GTA 5.",
-    "tipo": "v",
-    "id": "e44d8a9a-1a0e-401e-a0e8-6df4caab26cd"
+      "nombre": "GTA V",
+      "precio": "1500",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651593832/a2p6rqjgcz9yt77k6cpg.png",
+      "descripcion": "GTA V (Grand Theft Auto V) es la quinta entrega numerada de la saga superventas de Rockstar Games. Se trata de una aventura de acción de mundo abierto con multitud de misiones en la que encarnamos a tres personajes distintos: Trevor, Michael y Franklin. Además, cuenta con GTA Online, el modo multijugador en lína de GTA 5.",
+      "tipo": "v",
+      "id": "e44d8a9a-1a0e-401e-a0e8-6df4caab26cd"
     },
     {
-    "nombre": "Man of Medan",
-    "precio": "1600",
-    "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651594243/qa3d5wa4tp231rhwbjx4.png",
-    "descripcion": "The Dark Pictures Anthology es una serie de juegos de terror cinematográfico, basados en decisiones, que pueden jugarse de forma individual o en línea. En Man of Medan, cinco amigos se embarcan en una excursión de buceo que se tornará siniestra.",
-    "tipo": "v",
-    "id": "3bb930fe-9594-4eee-aa74-840dbab20763"
+      "nombre": "Man of Medan",
+      "precio": "1600",
+      "imagen": "https://res.cloudinary.com/laureano/image/upload/v1651594243/qa3d5wa4tp231rhwbjx4.png",
+      "descripcion": "The Dark Pictures Anthology es una serie de juegos de terror cinematográfico, basados en decisiones, que pueden jugarse de forma individual o en línea. En Man of Medan, cinco amigos se embarcan en una excursión de buceo que se tornará siniestra.",
+      "tipo": "v",
+      "id": "3bb930fe-9594-4eee-aa74-840dbab20763"
     }
-    ],
-
-    "usuario": [
-        {
-          "estado": "false",
-          "usuario": "valentina",
-          "password": "ponona pononita",
-          "id": 1
-        }
-      ]
-
+  ],
+  "usuario": [
+    {
+      "estado": "false",
+      "usuario": "valentina",
+      "password": "ponona pononita",
+      "id": 1
+    }
+  ]
 }

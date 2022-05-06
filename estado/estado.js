@@ -1,5 +1,8 @@
 import { userServices } from "../service/user-service.js";
 
+var url = validarLocation();
+url = url + "crud.html";
+console.log(url);
 
 const logout = () => { 
     userServices.perfilUsuario().then((data) => {    
@@ -18,7 +21,7 @@ const crearLogin = () => {
     const a = document.createElement("a");
     a.className = "header__login";
     a.innerHTML = "Iniciar sesión";
-    a.setAttribute("href","screens/crud.html");
+    a.setAttribute("href",`${url}`);
     const sticky = document.querySelector(".sticky__header");
     sticky.appendChild(a);
 
@@ -44,7 +47,7 @@ const crearAdm = () => {
     const a = document.createElement("a");
     a.className = "header__adm";
     a.innerHTML = "Administrar Productos";
-    a.setAttribute("href","screens/crud.html");
+    a.setAttribute("href",`${url}`);
     const sticky = document.querySelector(".sticky__header");
     sticky.appendChild(a);
 

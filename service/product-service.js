@@ -1,7 +1,9 @@
-const listaProducto = () => fetch("https://tryhardzone.herokuapp.com/producto").then((respuesta) => respuesta.json());
+/* https://tryhardzone.herokuapp.com/producto */
+
+const listaProducto = () => fetch("http://localhost:3000/producto").then((respuesta) => respuesta.json());
 
 const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
-    return fetch("https://tryhardzone.herokuapp.com/producto", {
+    return fetch("http://localhost:3000/producto", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -11,7 +13,7 @@ const registrarProducto = (imagen, nombre, precio, descripcion, tipo) => {
 }
 
 const eliminarProducto = (id) =>{
-    return fetch(`https://tryhardzone.herokuapp.com/producto/${id}`, {
+    return fetch(`http://localhost:3000/producto/${id}`, {
         method: "DELETE",
     })
 
@@ -20,7 +22,7 @@ const eliminarProducto = (id) =>{
 
 const actualizarProducto = (nombre,precio,imagen,descripcion,tipo,id) => {
     
-    return fetch(`https://tryhardzone.herokuapp.com/producto/${id}`,{
+    return fetch(`http://localhost:3000/producto/${id}`,{
         method:'PUT',
         headers: {
             'Content-Type': 'application/json',
