@@ -10,8 +10,8 @@ const actualizarEstado = (id,status) => {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({estado: `${status}`,
-        usuario: "valentina",
-        password: "ponona pononita"})
+        usuario: "laureano",
+        password: "qwerty"})
 
     })
     .then((respuesta) => console.log(respuesta.json()))
